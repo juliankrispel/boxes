@@ -1,0 +1,40 @@
+@import "../settings/list";
+
+$list-padding-left: 1.1em !default;
+$unordered-list-style: disc !default;
+$list-line-height: inherit; 
+$inline-list-margin: 5px;
+
+// Standard 
+ul{
+    padding-left: $list-padding-left;
+    list-style: $unordered-list-style;
+    line-height: $list-line-height;
+}
+
+// Strip list style and reset padding
+.no-list-style{
+    list-style: none;
+    padding-left: 0;
+    line-height: $list-line-height;
+}
+
+// Make sure that nested uls are indented even if no bullet.
+ul .no-list-style{
+    padding-left: $list-padding-left;
+    line-height: $list-line-height;
+}
+
+// Inline list discards bullets and puts the list inline. This doesn't have to be a list by the way
+.inline-list{
+    padding-left: 0;
+
+    > *{
+        display: inline-block;
+        margin-right: $inline-list-margin;
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}

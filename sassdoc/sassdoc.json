@@ -1,0 +1,1 @@
+{"list":{"-private-function":{"param":[{"type":"Color","description":"a color!","name":"$color"}],"private":[""],"function":["-private-function"],"overview":["this is a private function"],"source":"sass/modules/_list.scss","linenum":26,"return":[{"type":"Boolean","description":"true of it succeed, false if it failed"}],"category":"list"}}}

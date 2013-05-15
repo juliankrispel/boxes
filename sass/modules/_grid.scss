@@ -1,0 +1,31 @@
+@import "../settings/grid";
+
+//Settings
+$row-width: 1000px !default;
+$is-row-centered: true !default;
+
+$column-number: 12 !default;
+$float: left !default;
+$breakpoint: 767px !default;
+
+.row{
+    width: 100%;
+    max-width: $row-width;
+    @include clearfix();
+    @if $is-row-centered == true{
+        margin: 0 auto;
+    }
+}
+
+// Generate Columns
+.columns, .column{
+    float: left;
+}
+
+@for $i from 1 through $column-number {
+    .large-#{$i}{
+        width: percentage(($i / $column-number));
+    }
+}
+
+// Generate Rows

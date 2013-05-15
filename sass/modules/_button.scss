@@ -1,0 +1,55 @@
+@import "compass/css3/border-radius";
+@import "compass/css3/appearance";
+@import "../settings/button";
+
+$button-padding: 1em 1.3em !default;
+$button-font-size: 1em !default;
+$button-font-color: $secondary-color !default;
+$button-letter-spacing: 0 !default;
+$button-font-weight: bold !default;
+$button-border-radius: $border-radius !default;
+$button-line-height: 1em !default;
+$button-is-embossed: true !default;
+$button-background: $secondary-background-color !default;
+$button-border: 1px solid #ccc !default;
+$button-line-height: $line-height !default;
+
+$small-button-font-size: .8em !default;
+$small-button-padding: .7em 1em !default;
+
+@mixin button(
+    $padding: $button-padding,
+    $font-size: $button-font-size,
+    $border-radius: $button-border-radius,
+    $is-embossed: $button-is-embossed,
+    $background: $button-background,
+    $border: $button-border,
+    $font-weight: $button-font-weight,
+    $font-color: $button-font-color,
+    $letter-spacing: $button-letter-spacing,
+    $line-height: $button-line-height
+){
+    padding: $padding;
+    font-size: $font-size;
+    @include border-radius($border-radius);
+    background: $background;
+    border: $border;
+    text-decoration: none;
+    font-weight: $font-weight;
+    color: $font-color;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+}
+
+.button{
+    @include button();
+    display: inline-block;
+    margin: 0;
+    @include appearance(none);
+    height: auto;
+}
+
+.button.small{
+    font-size: $small-button-font-size;
+    padding: $small-button-padding;
+}
