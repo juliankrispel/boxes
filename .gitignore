@@ -3,3 +3,4 @@ stylesheets
 .DS_Store
 node_modules
 components
+sassdoc
