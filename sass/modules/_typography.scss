@@ -1,7 +1,7 @@
 // Typography Defaults:
 
 // Defaults for Base Typography
-$base-size: 16px !default;
+$base-font-size: $base-font-size !default;
 $base-family: sans-serif !default;
 $base-line-height: 1.4em !default;
 $text-direction: ltr;
@@ -23,45 +23,6 @@ $h3-line-height: $base-line-height !default;
 $h4-line-height: $base-line-height !default;
 $h5-line-height: $base-line-height !default;
 $h6-line-height: $base-line-height !default;
-
-/*************************************************************/
-
-  /* Typography resets */
-  div,
-  dl,
-  dt,
-  dd,
-  ul,
-  ol,
-  li,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  pre,
-  form,
-  p,
-  blockquote,
-  th,
-  td {
-    margin:0;
-    padding:0;
-    direction: $text-direction;
-  }
-
-// Base Typography
-body{
-    font-size: $base-size;
-    font-family: $base-family;
-    line-height: $base-line-height;
-    color: $body-color;
-}
-
-a{
-    color: $secondary-color;
-}
 
 // Headings
 

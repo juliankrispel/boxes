@@ -1,0 +1,17 @@
+@import "compass/css3/box-shadow";
+
+$panel-padding: 1em !default;
+$panel-background: lighten($secondary-background-color, 5) !default;
+$panel-border: 1px solid #ccc !default;
+$box-shadow: $box-shadow !default;
+$panel-border-radius: $border-radius;
+$panel-margin-bottom: $margin;
+
+.panel{
+    padding: $panel-padding;
+    background: $panel-background;
+    border: $panel-border;
+    @include box-shadow($box-shadow);
+    border-radius: $panel-border-radius;
+    margin-bottom: $panel-margin-bottom;
+}

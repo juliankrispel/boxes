@@ -1,0 +1,23 @@
+@import "compass/css3/box-sizing";
+
+.inline-block     { display: inline-block; }
+.inline           { display: inline; }
+
+.no-margin        { margin: 0; }
+
+.left             { float: left !important; }
+.right            { float: right !important; }
+
+.text-left        { text-align: left !important; }
+.text-right       { text-align: right !important; }
+.text-center      { text-align: center !important; }
+.text-justify     { text-align: justify !important; }
+
+.hide             { display: none; }
+
+// Using this: http://stackoverflow.com/questions/1030793/input-with-displayblock-is-not-a-block-why-not 
+.full-width{
+    display: block;
+    width:100%;
+    @include box-sizing(border-box); 
+}

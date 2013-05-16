@@ -1,9 +1,12 @@
 @import "normalize";
 @import "settings";
 @import "global";
-@import "helpers/global";
+@import "mixins/helper";
 @import "modules/button";
 @import "modules/grid";
 @import "modules/margin";
 @import "modules/typography";
+@import "modules/panel";
 @import "modules/list";
+@import "modules/form";
+@import "modules/helper";

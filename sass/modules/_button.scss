@@ -1,55 +1,112 @@
+@import "compass/css3/text-shadow";
+@import "compass/css3/box-shadow";
 @import "compass/css3/border-radius";
 @import "compass/css3/appearance";
 @import "../settings/button";
+@import "../mixins/button";
+@import "compass/utilities/text/nowrap";
 
 $button-padding: 1em 1.3em !default;
-$button-font-size: 1em !default;
+$button-font-size: emCalc(14px) !default;
 $button-font-color: $secondary-color !default;
 $button-letter-spacing: 0 !default;
 $button-font-weight: bold !default;
 $button-border-radius: $border-radius !default;
 $button-line-height: 1em !default;
-$button-is-embossed: true !default;
-$button-background: $secondary-background-color !default;
+$button-is-flat: false !default;
+$button-background-color: $secondary-background-color !default;
+$button-hover-background-color: darken($secondary-background-color, 5) !default;
 $button-border: 1px solid #ccc !default;
+$button-box-shadow: $box-shadow !default;
+$button-transition: $transition !default;
 $button-line-height: $line-height !default;
+$button-margin-bottom: $margin !default;
 
-$small-button-font-size: .81em !default;
+$small-button-font-size: emCalc(12px) !default;
 $small-button-padding: .7em 1em !default;
 
-@mixin button(
-    $padding: $button-padding,
-    $font-size: $button-font-size,
-    $border-radius: $button-border-radius,
-    $is-embossed: $button-is-embossed,
-    $background: $button-background,
-    $border: $button-border,
-    $font-weight: $button-font-weight,
-    $font-color: $button-font-color,
-    $letter-spacing: $button-letter-spacing,
-    $line-height: $button-line-height
-){
-    padding: $padding;
-    font-size: $font-size;
-    @include border-radius($border-radius);
-    background: $background;
-    border: $border;
-    text-decoration: none;
-    font-weight: $font-weight;
-    color: $font-color;
-    letter-spacing: $letter-spacing;
-    line-height: $line-height;
-}
+$large-button-font-size: 1.5em !default;
+$large-button-padding: 1em 1.3em !default;
+
+$tiny-button-padding: .5em .7em !default;
+$tiny-button-font-size: .81em !default;
+
+$primary-button-background-color: $primary-color;
+$primary-button-hover-background-color: darken($primary-color, 3);
+$primary-button-font-color: #fff !default;
+$primary-button-border-color: darken($primary-color, 8);
+$primary-button-box-shadow: 0 2px darken($primary-color, 5) !default;
 
 .button{
-    @include button();
+    @include button-base();
     display: inline-block;
+    text-align: center;
     margin: 0;
+    margin-bottom: $button-margin-bottom;
     @include appearance(none);
     height: auto;
+
+    @if($button-is-flat == false){
+        @include text-shadow(0 -1px 2px lighten($button-background-color, 15));
+        @include box-shadow( 
+            $button-box-shadow, 
+            inset 0 -10px 10px -10px darken($button-background-color, 5),
+            inset 0 10px 10px -10px lighten($button-background-color, 5) 
+        );
+    }else{
+        @include box-shadow($button-box-shadow);
+    }
+
+    &:hover{
+        background-color: $button-hover-background-color;
+    }
+
+    &.small{
+        font-size: $small-button-font-size;
+        padding: $small-button-padding;
+    }
+
+    &.large{
+        font-size: $large-button-font-size;
+        padding: $large-button-padding;
+    }
+
+    &.primary{
+        background-color: $primary-button-background-color;
+        color: $primary-button-font-color;
+        &:hover{
+            background-color: $primary-button-hover-background-color;
+        }
+        border-color: $primary-button-border-color;
+
+        @if($button-is-flat == false){
+            @include text-shadow(0 -1px 2px darken($primary-button-background-color, 7));
+            @include box-shadow( 
+                $primary-button-box-shadow, 
+                inset 0 -10px 10px -10px darken($primary-button-background-color, 5),
+                inset 0 10px 10px -10px lighten($primary-button-background-color, 5) 
+            );
+        }
+
+    }
 }
 
-.button.small{
-    font-size: $small-button-font-size;
-    padding: $small-button-padding;
+.btn-group{
+    @include nowrap;
+    position: relative;
+    display: block;
+    @include clearfix();
+    .button, input{
+        float: left;
+        @if($button-border-radius){
+            @include border-radius(0);
+            &:last-child{
+                @include border-radius(0 $button-border-radius $button-border-radius 0);
+            }
+            &:first-child{
+                @include border-radius($button-border-radius 0 0 $button-border-radius);
+            }
+
+        }
+    }
 }

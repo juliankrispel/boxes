@@ -1,0 +1,27 @@
+@import "compass/css3/transition";
+
+@mixin button-base(
+    $padding: $button-padding,
+    $font-size: $button-font-size,
+    $border-radius: $button-border-radius,
+    $background: $button-background-color,
+    $border: $button-border,
+    $font-weight: $button-font-weight,
+    $font-color: $button-font-color,
+    $letter-spacing: $button-letter-spacing,
+    $line-height: $button-line-height,
+    $transition: $button-transition
+){
+    padding: $padding;
+    font-size: $font-size;
+    @include border-radius($border-radius);
+    background: $background;
+    border: $border;
+    text-decoration: none;
+    font-weight: $font-weight;
+    color: $font-color;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+    @include transition($transition);
+}
+

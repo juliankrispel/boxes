@@ -1,0 +1,48 @@
+@import "compass/css3/box-shadow";
+@import "../settings/form";
+
+$input-line-height: 1em !default;
+$input-font-size: emCalc(14px) !default;
+$input-padding: 1em .8em !default;
+$input-border: 1px solid #ccc !default;
+$input-border-radius: $border-radius;
+$input-box-shadow: inset 0 2px 2px #eee !default;
+
+$large-input-font-size: 1.5em !default;
+$large-input-padding: $input-padding !default;
+
+$small-input-font-size: emCalc(12px) !default;
+$small-input-padding: $input-padding !default;
+
+$tiny-input-font-size: emCalc(10px) !default;
+$tiny-input-padding: $input-padding !default;
+
+input{
+   @include box-shadow($input-box-shadow);
+   line-height: $input-line-height;
+   font-size: $input-font-size;
+   border: $input-border;
+   border-radius: $input-border-radius;
+   padding: $input-padding;
+
+   &.large{
+        font-size: $large-input-font-size;
+        @if($large-input-padding != $input-padding){
+            padding: $large-input-padding;
+        }
+   }
+
+   &.small{
+        font-size: $small-input-font-size;
+        @if($small-input-padding != $input-padding){
+            padding: $small-input-padding;
+        }
+   }
+
+   &.tiny{
+        font-size: $tiny-input-font-size;
+        @if($tiny-input-padding != $input-padding){
+            padding: $tiny-input-padding;
+        }
+   }
+}
