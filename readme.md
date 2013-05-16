@@ -12,4 +12,5 @@ It wants to be completely configurable, extensible and scalable, as well as powe
 
 ##Todo
 
-Look into being able to list repetitive elemnts with two modifiers kind by [using lists like dictionaries](https://gist.github.com/nathos/1212291)
+- Look into a list option for buttons [using lists like dictionaries](https://gist.github.com/nathos/1212291)
+- Add a make file that sets up a project
