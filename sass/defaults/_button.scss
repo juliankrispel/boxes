@@ -1,0 +1,42 @@
+/*
+ * BUTTONS SETTINGS 
+ * 
+ * Mostly used in "modules/_button.scss"
+ */
+
+$button-padding: 1em 1.3em !default;
+$button-font-size: emCalc(14px) !default;
+$button-font-color: $secondary-color !default;
+$button-letter-spacing: 0 !default;
+$button-font-weight: bold !default;
+$button-border-radius: $border-radius !default;
+$button-line-height: 1em !default;
+$button-is-flat: false !default;
+$button-background-color: $secondary-background-color !default;
+$button-hover-background-color: darken($secondary-background-color, 5) !default;
+$button-border: 1px solid #ccc !default;
+$button-box-shadow: $box-shadow !default;
+$button-transition: $transition !default;
+$button-line-height: $line-height !default;
+$button-margin-bottom: $margin !default;
+
+$small-button-font-size: emCalc(12px) !default;
+$small-button-padding: $button-padding !default;
+
+$large-button-font-size: 1.5em !default;
+$large-button-padding: $button-padding !default;
+
+$tiny-button-padding: $button-padding !default;
+$tiny-button-font-size: .81em !default;
+
+$primary-button-background-color: $primary-color !default;
+$primary-button-hover-background-color: darken($primary-color, 3) !default;
+$primary-button-font-color: #fff !default;
+$primary-button-border-color: darken($primary-color, 8) !default;
+$primary-button-box-shadow: 0 2px darken($primary-color, 5) !default;
+
+$button-group-margin-bottom: $button-margin-bottom !default;
+
+$buttons:   primary       #eee      #000,
+            secondary     #333      #eee;
+            

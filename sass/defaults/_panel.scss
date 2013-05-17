@@ -1,0 +1,13 @@
+/*
+ * PANEl SETTINGS 
+ * 
+ * Mostly used in "modules/_panel.scss"
+ */
+
+$panel-padding: 1em !default;
+$panel-background: lighten($secondary-background-color, 5) !default;
+$panel-border: 1px solid #ccc !default;
+$panel-box-shadow: $box-shadow !default;
+$panel-border-radius: $border-radius !default;
+$panel-margin-bottom: $margin !default;
+$panel-font-color: auto !default;

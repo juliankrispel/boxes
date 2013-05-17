@@ -1,7 +1,13 @@
 @import "normalize";
-@import "settings/*";
-@import "defaults/*";
-@import "settings";
-@import "global";
+
 @import "mixins/helper";
+
+//Always load settings before defaults (Settings override defaults
+@import "settings/settings";
+@import "settings/*";
+
+@import "defaults/settings";
+@import "defaults/*";
+
+@import "app/*";
 @import "modules/*";

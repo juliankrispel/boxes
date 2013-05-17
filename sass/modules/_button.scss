@@ -5,39 +5,6 @@
 @import "../mixins/button";
 @import "compass/utilities/text/nowrap";
 
-$button-padding: 1em 1.3em !default;
-$button-font-size: emCalc(14px) !default;
-$button-font-color: $secondary-color !default;
-$button-letter-spacing: 0 !default;
-$button-font-weight: bold !default;
-$button-border-radius: $border-radius !default;
-$button-line-height: 1em !default;
-$button-is-flat: false !default;
-$button-background-color: $secondary-background-color !default;
-$button-hover-background-color: darken($secondary-background-color, 5) !default;
-$button-border: 1px solid #ccc !default;
-$button-box-shadow: $box-shadow !default;
-$button-transition: $transition !default;
-$button-line-height: $line-height !default;
-$button-margin-bottom: $margin !default;
-
-$small-button-font-size: emCalc(12px) !default;
-$small-button-padding: .7em 1em !default;
-
-$large-button-font-size: 1.5em !default;
-$large-button-padding: 1em 1.3em !default;
-
-$tiny-button-padding: .5em .7em !default;
-$tiny-button-font-size: .81em !default;
-
-$primary-button-background-color: $primary-color !default;
-$primary-button-hover-background-color: darken($primary-color, 3) !default;
-$primary-button-font-color: #fff !default;
-$primary-button-border-color: darken($primary-color, 8) !default;
-$primary-button-box-shadow: 0 2px darken($primary-color, 5) !default;
-
-$button-group-margin-bottom: $button-margin-bottom !default;
-
 .button{
     @include button-base();
     display: inline-block;
@@ -46,6 +13,8 @@ $button-group-margin-bottom: $button-margin-bottom !default;
     margin-bottom: $button-margin-bottom;
     @include appearance(none);
     height: auto;
+    font-size: $button-font-size;
+    padding: $button-padding;
 
     @if($button-is-flat == false){
         @include text-shadow(0 -1px 2px lighten($button-background-color, 15));
@@ -113,3 +82,14 @@ $button-group-margin-bottom: $button-margin-bottom !default;
         }
     }
 }
+
+.btn{
+    @each $button in $buttons{
+        &.#{nth($button, 1)}{
+            color: nth($button, 2);
+            background: nth($button, 3);
+        }
+    }
+
+}
+

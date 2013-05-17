@@ -11,7 +11,7 @@ $rulenames: margin, padding;
     @while $i > 0{
         $c: nth($b, $i);
         $d: nth($a, $i);
-        
+
         .#{$classname} {
             #{$rulename}: $margin;
         }
@@ -25,7 +25,7 @@ $rulenames: margin, padding;
             #{$rulename}#{$d}: $margin;
         }
         .#{$classname}#{$c}-s {
-            #{$rulename}#{$d}: $margin-small;
+            #{$rulename}#{$d}: $margin-tiny;
         }
 
         @media(max-width: $small-screen){
@@ -33,7 +33,7 @@ $rulenames: margin, padding;
                 #{$rulename}: $margin;
             }
             .small-#{$classname}-s {
-                #{$rulename}: $margin-small;
+                #{$rulename}: $margin-tiny;
             }
             .small-#{$classname}#{$c}-l {
                 #{$rulename}#{$d}: $margin-large;
@@ -42,7 +42,7 @@ $rulenames: margin, padding;
                 #{$rulename}#{$d}: $margin;
             }
             .small-#{$classname}#{$c}-s {
-                #{$rulename}#{$d}: $margin-small;
+                #{$rulename}#{$d}: $margin-tiny;
             }
         }
 

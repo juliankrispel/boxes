@@ -1,0 +1,18 @@
+@import "compass/css3/box-sizing";
+
+@if($global-box-sizing){
+    *,
+    *:before,
+    *:after {
+        @include box-sizing($global-box-sizing);
+    }
+}
+
+pre{
+    display: inline;
+}
+
+body{
+    background: $body-background;
+    color: $body-color;
+}

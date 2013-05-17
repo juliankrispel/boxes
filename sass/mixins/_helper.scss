@@ -1,4 +1,4 @@
-$em-base: $base-font-size !default;
+$base-font-size: 1em !default;
 
 // https://github.com/zurb/foundation/blob/c8c04ac6c61586c04d98c6e7dc3488627ecf419f/scss/foundation/components/_global.scss#L99-L103
 @mixin clearfix() {
@@ -9,5 +9,5 @@ $em-base: $base-font-size !default;
 
 // https://github.com/zurb/foundation/blob/c8c04ac6c61586c04d98c6e7dc3488627ecf419f/scss/foundation/components/_global.scss#L139-L141
 @function emCalc($pxWidth) {
-  @return $pxWidth / $em-base * 1em;
+  @return $pxWidth / $base-font-size * 1em;
 }

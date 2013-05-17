@@ -1,0 +1,46 @@
+// Typography Defaults:
+
+// Defaults for Base Typography
+$base-font-size: $base-font-size !default;
+$base-family: sans-serif !default;
+$base-line-height: 1.4em !default;
+$text-direction: ltr;
+
+// Defaults for Headings
+$heading-weight: bold !default;
+$heading-style: normal !default;
+$heading-style: normal !default;
+
+$h1: 2.3em !default;
+$h2: 2em !default;
+$h3: 1.5em !default;
+$h4: 1.2em !default;
+$h5: 1em !default;
+$h6: .9em !default;
+
+$h1-line-height: 1.1em !default;
+$h2-line-height: 1.2em !default;
+$h3-line-height: $base-line-height !default;
+$h4-line-height: $base-line-height !default;
+$h5-line-height: $base-line-height !default;
+$h6-line-height: $base-line-height !default;
+
+$h1-font-family: inherit !default;
+$h2-font-family: inherit !default;
+$h3-font-family: inherit !default;
+$h4-font-family: inherit !default;
+$h5-font-family: inherit !default;
+$h6-font-family: inherit !default;
+
+
+$paragraph-line-height: $base-line-height !default;
+$paragraph-margin: .5em 0;
+
+// Links
+
+$link-color: $secondary-color !default;
+$link-text-decoration: underline !default;
+$link-hover-color: $primary-color !default;
+$link-transition: $transition !default;
+
+

@@ -1,10 +1,3 @@
-$list-padding-left: 1.1em !default;
-$unordered-list-style: disc !default;
-$list-line-height: inherit; 
-$inline-list-margin: 5px;
-
-$list-image-text-align: left;
-
 // Standard 
 ul{
     padding-left: $list-padding-left;
@@ -80,7 +73,7 @@ ul .no-list-style{
     list-style: none;
     padding: 0;
     li{
-        padding-left: $list-padding-left;
+        padding-left: $custom-list-padding-left;
         position: relative;
     }
 }
@@ -95,7 +88,7 @@ ul .no-list-style{
  */
 
 .custom-list-image{
-    width: $list-padding-left;
+    width: $custom-list-padding-left;
     position: absolute;
     left: 0;
     text-align: $list-image-text-align;

@@ -1,11 +1,3 @@
-//Settings
-$row-width: 1280px !default;
-$is-row-centered: true !default;
-
-$column-number: 12 !default;
-$float: left !default;
-$breakpoint: 767px !default;
-
 .row{
     width: 100%;
     max-width: $row-width;
