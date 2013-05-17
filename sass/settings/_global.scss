@@ -1,3 +1,12 @@
+// Breakpoints
+$small-screen: 768px;
+$tiny-screen: 480px;
+$large-screen: 1440px;
+
+// Grid variables
+$row-width: 1280px;
+$is-row-centered: true;
+
 // Global variables
 $border-radius: 3px;
 
@@ -16,8 +25,8 @@ $primary-background-color: $primary-color;
 $secondary-background-color: #eee;
 
 // Margins
-$margin-large: 2em;
 $margin: 1.5em;
+$margin-large: 2em;
 $margin-small: 1em;
 $margin-tiny: .5em;
 

@@ -30,11 +30,13 @@ $large-button-padding: 1em 1.3em !default;
 $tiny-button-padding: .5em .7em !default;
 $tiny-button-font-size: .81em !default;
 
-$primary-button-background-color: $primary-color;
-$primary-button-hover-background-color: darken($primary-color, 3);
+$primary-button-background-color: $primary-color !default;
+$primary-button-hover-background-color: darken($primary-color, 3) !default;
 $primary-button-font-color: #fff !default;
-$primary-button-border-color: darken($primary-color, 8);
+$primary-button-border-color: darken($primary-color, 8) !default;
 $primary-button-box-shadow: 0 2px darken($primary-color, 5) !default;
+
+$button-group-margin-bottom: $button-margin-bottom !default;
 
 .button{
     @include button-base();
@@ -94,8 +96,10 @@ $primary-button-box-shadow: 0 2px darken($primary-color, 5) !default;
     @include nowrap;
     position: relative;
     display: block;
+    margin-bottom: $button-group-margin-bottom;
     @include clearfix();
     .button, input{
+        margin-bottom: 0;
         float: left;
         @if($button-border-radius){
             @include border-radius(0);

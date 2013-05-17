@@ -7,6 +7,7 @@ $panel-margin-bottom: $margin;
 
 .panel{
     padding: $panel-padding;
+    @include clearfix();
     background: $panel-background;
     border: $panel-border;
     @include box-shadow($box-shadow);

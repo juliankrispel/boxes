@@ -24,6 +24,9 @@ $h4-line-height: $base-line-height !default;
 $h5-line-height: $base-line-height !default;
 $h6-line-height: $base-line-height !default;
 
+$paragraph-line-height: $base-line-height !default;
+$paragraph-margin: .5em 0;
+
 // Headings
 
 $heading-font-sizes: $h1, $h2, $h3, $h4, $h5, $h6;
@@ -35,4 +38,9 @@ $heading-line-heights: $h1-line-height, $h2-line-height, $h3-line-height, $h4-li
         line-height: nth($heading-line-heights, $i);
         margin: 0;
     }
+}
+
+p{
+    line-height: $base-line-height;
+    margin: $paragraph-margin;
 }

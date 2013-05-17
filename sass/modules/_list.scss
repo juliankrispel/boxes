@@ -3,6 +3,8 @@ $unordered-list-style: disc !default;
 $list-line-height: inherit; 
 $inline-list-margin: 5px;
 
+$list-image-text-align: left;
+
 // Standard 
 ul{
     padding-left: $list-padding-left;
@@ -10,7 +12,14 @@ ul{
     line-height: $list-line-height;
 }
 
-// Strip list style and reset padding
+/*
+ * .no-list-style
+ * 
+ * Removes default list-style and padding
+ * 
+ * @tag .no-list-style
+ */
+
 .no-list-style{
     list-style: none;
     padding-left: 0;
@@ -23,11 +32,27 @@ ul .no-list-style{
     line-height: $list-line-height;
 }
 
-// Inline list discards bullets and puts the list inline. This doesn't have to be a list by the way
+
+/*
+ * Inline list 
+ * 
+ * Discards bullets and puts the list inline. This doesn't have to be a list by the way, it can also be any container with children
+ * <ul class="inline-list">
+ *     <li>Item 1</li>
+ *     <li>Item 2</li>
+ *     <li>Item 3</li>
+ * </ul>
+ * 
+ * @tag       .inline-list
+ * @child-tag > * (any direct descendant)
+ */
+
 .inline-list{
     padding-left: 0;
+    margin: 0;
 
     > *{
+        vertical-align: middle;
         display: inline-block;
         margin-right: $inline-list-margin;
 
@@ -35,4 +60,43 @@ ul .no-list-style{
             margin-right: 0;
         }
     }
+}
+
+/*
+ * Custom List
+ * 
+ * For use with custom bullet points. For example
+ * <ul class="custom-list">
+ *     <li><span class="list-image">A</span>Item A</li>
+ *     <li><span class="list-image">B</span>Item B</li>
+ *     <li><span class="list-image">C</span>Item C</li>
+ * </ul>
+ * 
+ * @tag       .custom-list
+ * @child-tag .custom-list-image
+ */
+
+.custom-list{
+    list-style: none;
+    padding: 0;
+    li{
+        padding-left: $list-padding-left;
+        position: relative;
+    }
+}
+
+/*
+ * Custom List image
+ * 
+ * Mainly for use inside .custom-list
+ * 
+ * @tag         .list-image
+ * @parent-tag  .custom-list
+ */
+
+.custom-list-image{
+    width: $list-padding-left;
+    position: absolute;
+    left: 0;
+    text-align: $list-image-text-align;
 }
