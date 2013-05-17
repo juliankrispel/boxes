@@ -10,7 +10,12 @@ task :install_bower_dependencies do
     system "node_modules/bower/bin/bower install"
 end
 
-task :install => [:install_node_dependencies, :install_bower_dependencies] do
+task :create_user_settings do
+    system "mkdir sass/settings"
+    system "touch sass/settings/_settings.scss"
+end
+
+task :install => [:install_node_dependencies, :install_bower_dependencies, :create_user_settings] do
     puts "**********************************"
     puts "*                                *"
     puts "*                                *"
@@ -25,4 +30,3 @@ task :install => [:install_node_dependencies, :install_bower_dependencies] do
     puts "*                                *"
     puts "**********************************"
 end
-
