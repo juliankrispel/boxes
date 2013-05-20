@@ -3,11 +3,26 @@
 @import "mixins/helper";
 
 //Always load settings before defaults (Settings override defaults
-@import "settings/settings";
-@import "settings/*";
 
+@import "normalize";
+
+@import "defaults/base";
+@import "defaults/button";
+@import "defaults/form";
+@import "defaults/global";
+@import "defaults/grid";
+@import "defaults/list";
+@import "defaults/panel";
 @import "defaults/settings";
-@import "defaults/*";
+@import "defaults/typography";
 
-@import "app/*";
-@import "modules/*";
+@import "modules/base";
+@import "modules/breadcrumbs";
+@import "modules/button";
+@import "modules/form";
+@import "modules/grid";
+@import "modules/helper";
+@import "modules/list";
+@import "modules/margin";
+@import "modules/panel";
+@import "modules/typography";
