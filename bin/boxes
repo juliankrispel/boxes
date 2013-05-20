@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby 
+require "rubygems"
+require "thor"
+
+class BoxesCli < Thor
+    desc "hello", "Says Hello"
+    def hello()
+        say "Hello"
+        say File.expand_path(File.dirname(__FILE__))
+        say Dir.pwd
+    end
+
+    desc "Create", "Create a boxes project. This runs a setup dialog"
+    def create project_name=nil
+        if !project_name
+            project_name = ask 'What do you want to call your project?'
+            if project_name.strip.empty?
+                say "No Project Name defined, let's exit then"
+                exit
+            end
+        end
+
+        
+
+        if yes? 'Would you like an icon font?'
+            say 'great'
+        end
+
+        if yes? 'Would you like to include some javascript libraries?'
+            say "Cool"
+        end
+        
+    end
+end
+
+BoxesCli.start(ARGV)
+
+

@@ -1,37 +1,37 @@
 // Breakpoints
-$small-screen: 768px;
-$tiny-screen: 480px;
-$large-screen: 1440px;
+$small-screen: 768px !default;
+$tiny-screen: 480px !default;
+$large-screen: 1440px !default;
 
 // Grid variables
-$row-width: 1280px;
-$is-row-centered: true;
+$row-width: 1280px !default;
+$is-row-centered: true !default;
 
 // Global variables
-$border-radius: 3px;
+$border-radius: 3px !default;
 
 // Typography
-$line-height: 1.35em;
-$base-font-size: 16px;
+$line-height: 1.35em !default;
+$base-font-size: 16px !default;
 
 // Colors
 // Font Colors
-$primary-color: #00960e;
-$secondary-color: #888;
-$body-color: #333;
+$primary-color: #00960e !default;
+$secondary-color: #888 !default;
+$body-color: #333 !default;
 
 // Background Colors
-$primary-background-color: $primary-color;
-$secondary-background-color: #eee;
+$primary-background-color: $primary-color !default;
+$secondary-background-color: #eee !default;
 
 // Margins
-$margin: 1.5em;
-$margin-large: 2em;
-$margin-small: 1em;
-$margin-tiny: .5em;
+$margin: 1.5em !default;
+$margin-large: 2em !default;
+$margin-small: 1em !default;
+$margin-tiny: .5em !default;
 
 // Transitions
-$transition: .2s;
+$transition: .2s !default;
 
 // Box Shadows
-$box-shadow: 0 2px #ddd;
+$box-shadow: 0 2px #ddd !default;
