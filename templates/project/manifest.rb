@@ -1,13 +1,15 @@
 description 'Boxes Compass Gem'
 
 # Sass Files
-stylesheet '../../sass/foundation/_variables.scss',       :to => '_settings.scss'
+# stylesheet '../../sass/foundation/_variables.scss',       :to => '_settings.scss'
 stylesheet 'scss/app.scss',                               :to => 'app.scss', :media => "screen, projector, print"
+stylesheet 'scss/settings/_settings.scss',                               :to => '_settings.scss'
 
 # Make sure you list all the project template files here in the manifest.
 file 'humans.txt'
 file 'robots.txt'
 file 'LICENSE.txt'
+file "index.html"
 
 #def copy_js_from(relative_path, prefix_path, excludes=[])
 #  absolute_path = File.join(File.dirname(__FILE__), relative_path, prefix_path)
