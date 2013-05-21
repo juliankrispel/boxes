@@ -12,6 +12,10 @@ pre{
     display: inline;
 }
 
+html, body{
+    height: 100%;
+}
+
 body{
     background: $body-background;
     color: $body-color;
