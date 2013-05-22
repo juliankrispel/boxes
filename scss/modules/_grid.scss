@@ -13,9 +13,37 @@
 }
 
 @for $i from 1 through $column-number {
-    .large-#{$i}{
-        width: percentage(($i / $column-number));
+
+    @media(min-width: $small-screen){
+        .large-#{$i}{
+            width: percentage(($i / $column-number));
+        } 
+    }
+
+    @media(max-width: $small-screen){
+        .small-#{$i}{
+            width: percentage(($i / $column-number));
+        }
+    }
+
+    @media(max-width: $tiny-screen){
+        .tiny-#{$i}{
+            width: percentage(($i / $column-number));
+        }
+    }
+
+    .lt-ie9 {
+        .large-#{$i}{
+            width: percentage(($i / $column-number));
+        } 
     }
 }
 
 // Generate Rows
+@for $i from 1 to $column-number {
+    .block-grid-#{$i}{
+        & > *:nth-child(#{$i}n + 1){
+            clear: both;
+        }
+    }
+}

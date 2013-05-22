@@ -1,14 +1,11 @@
 // Headings
 
-$heading-font-sizes: $h1, $h2, $h3, $h4, $h5, $h6;
-$heading-line-heights: $h1-line-height, $h2-line-height, $h3-line-height, $h4-line-height, $h5-line-height, $h6-line-height;
-$heading-font-families: $h1-font-family, $h2-font-family, $h3-font-family, $h4-font-family, $h5-font-family, $h6-font-family;
-
-@for $i from 1 through 6{
-    h#{$i}, .h#{$i}{
-        font-size: nth($heading-font-sizes, $i);
-        line-height: nth($heading-line-heights, $i);
-        font-family: nth($heading-font-families, $i);
+@each $heading in $headings{
+    #{nth($heading, 1)}, .#{nth($heading, 1)}{
+        font-size: nth($heading, 2);
+        line-height: nth($heading, 3);
+        font-weight: nth($heading, 4);
+        font-family: nth($heading, 5);
         margin: 0;
     }
 }
@@ -29,4 +26,8 @@ a{
 
 body{
     font-family: $base-family;
+}
+
+small, .small{
+    font-size: $small;
 }

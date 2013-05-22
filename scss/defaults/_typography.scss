@@ -1,46 +1,39 @@
-// Typography Defaults:
+// Typography Defaults
 
 // Defaults for Base Typography
-$base-font-size: $base-font-size !default;
-$base-family: sans-serif !default;
-$base-line-height: 1.4em !default;
-$text-direction: ltr;
+$base-font-size                 : $base-font-size !default;
+$base-family                    : sans-serif !default;
+$base-line-height               : 1.4em !default;
+$text-direction                 : ltr;
+
+// Headings
 
 // Defaults for Headings
-$heading-weight: bold !default;
-$heading-style: normal !default;
-$heading-style: normal !default;
+$heading-weight                 : bold !default;
+$heading-style                  : normal !default;
+$heading-family                 : inherit !default;
 
-$h1: 2.3em !default;
-$h2: 2em !default;
-$h3: 1.5em !default;
-$h4: 1.2em !default;
-$h5: 1em !default;
-$h6: .9em !default;
+//    class-name  font-size   line-height         font-weight       font-family 
+$h1 : h1          2.3em       1.1em               $heading-weight   $heading-family   !default;
+$h2 : h2          2em         1.2em               $heading-weight   $heading-family   !default;
+$h3 : h3          1.5em       $base-line-height   $heading-weight   $heading-family   !default;
+$h4 : h4          1.2em       $base-line-height   $heading-weight   $heading-family   !default;
+$h5 : h5          1em         $base-line-height   $heading-weight   $heading-family   !default;
+$h6 : h6          .9em        $base-line-height   $heading-weight   $heading-family   !default;
 
-$h1-line-height: 1.1em !default;
-$h2-line-height: 1.2em !default;
-$h3-line-height: $base-line-height !default;
-$h4-line-height: $base-line-height !default;
-$h5-line-height: $base-line-height !default;
-$h6-line-height: $base-line-height !default;
+$headings: $h1, $h2, $h3, $h4, $h5, $h6;
 
-$h1-font-family: inherit !default;
-$h2-font-family: inherit !default;
-$h3-font-family: inherit !default;
-$h4-font-family: inherit !default;
-$h5-font-family: inherit !default;
-$h6-font-family: inherit !default;
+// Paragraph
+$paragraph-line-height          : $base-line-height !default;
+$paragraph-margin               : .5em 0 !default;
 
+// Small
 
-$paragraph-line-height: $base-line-height !default;
-$paragraph-margin: .5em 0 !default;
+$small                          : .7em !default;
 
 // Links
 
-$link-color: $secondary-color !default;
-$link-text-decoration: underline !default;
-$link-hover-color: $primary-color !default;
-$link-transition: $transition !default;
-
-
+$link-color                     : $secondary-color !default;
+$link-text-decoration           : underline !default;
+$link-hover-color               : $primary-color !default;
+$link-transition                : $transition !default;

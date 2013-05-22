@@ -91,5 +91,6 @@ ul .no-list-style{
     width: $custom-list-padding-left;
     position: absolute;
     left: 0;
+    line-height: inherit;
     text-align: $list-image-text-align;
 }

@@ -78,18 +78,6 @@
             &:first-child{
                 @include border-radius($button-border-radius 0 0 $button-border-radius);
             }
-
         }
     }
 }
-
-.btn{
-    @each $button in $buttons{
-        &.#{nth($button, 1)}{
-            color: nth($button, 2);
-            background: nth($button, 3);
-        }
-    }
-
-}
-

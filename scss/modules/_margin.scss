@@ -25,8 +25,12 @@ $rulenames: margin, padding;
             #{$rulename}#{$d}: $margin;
         }
         .#{$classname}#{$c}-s {
+            #{$rulename}#{$d}: $margin-small;
+        }
+        .#{$classname}#{$c}-t {
             #{$rulename}#{$d}: $margin-tiny;
         }
+
 
         @media(max-width: $small-screen){
             .small-#{$classname} {
@@ -42,8 +46,12 @@ $rulenames: margin, padding;
                 #{$rulename}#{$d}: $margin;
             }
             .small-#{$classname}#{$c}-s {
+                #{$rulename}#{$d}: $margin-small;
+            }
+            .small-#{$classname}#{$c}-t {
                 #{$rulename}#{$d}: $margin-tiny;
             }
+
         }
 
         $i: $i - 1;
