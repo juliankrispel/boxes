@@ -17,18 +17,31 @@
     @media(min-width: $small-screen){
         .large-#{$i}{
             width: percentage(($i / $column-number));
-        } 
+        }
+        
+        .large-offset-#{$i}{
+            margin-left: percentage(($i / $column-number));
+        }
     }
 
     @media(max-width: $small-screen){
         .small-#{$i}{
             width: percentage(($i / $column-number));
         }
+
+        .small-offset-#{$i}{
+            margin-left: percentage(($i / $column-number));
+        }
+
     }
 
     @media(max-width: $tiny-screen){
         .tiny-#{$i}{
             width: percentage(($i / $column-number));
+        }
+
+        .tiny-offset-#{$i}{
+            margin-left: percentage(($i / $column-number));
         }
     }
 
@@ -36,6 +49,10 @@
         .large-#{$i}{
             width: percentage(($i / $column-number));
         } 
+
+        .large-offset-#{$i}{
+            margin-left: percentage(($i / $column-number));
+        }
     }
 }
 

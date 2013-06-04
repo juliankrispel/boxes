@@ -1,2 +1,16 @@
+.breadcrumbs{
+    > *{
+        display: inline-block;
 
+        &:after{
+            content: ' >';
+            display: inline;
+        }
+
+        &:last-child:after{
+            display: none;
+        }
+
+    }
+}
 

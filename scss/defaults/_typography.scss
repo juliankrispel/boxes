@@ -13,13 +13,13 @@ $heading-weight                 : bold !default;
 $heading-style                  : normal !default;
 $heading-family                 : inherit !default;
 
-//    class-name  font-size   line-height         font-weight       font-family 
-$h1 : h1          2.3em       1.1em               $heading-weight   $heading-family   !default;
-$h2 : h2          2em         1.2em               $heading-weight   $heading-family   !default;
-$h3 : h3          1.5em       $base-line-height   $heading-weight   $heading-family   !default;
-$h4 : h4          1.2em       $base-line-height   $heading-weight   $heading-family   !default;
-$h5 : h5          1em         $base-line-height   $heading-weight   $heading-family   !default;
-$h6 : h6          .9em        $base-line-height   $heading-weight   $heading-family   !default;
+//    class-name  font-size    small size       line-height         font-weight       font-family 
+$h1 : h1          2.3em        1.8em            1.1em               $heading-weight   $heading-family   !default;
+$h2 : h2          2em          1.7em            1.2em               $heading-weight   $heading-family   !default;
+$h3 : h3          1.5em        1.3em            $base-line-height   $heading-weight   $heading-family   !default;
+$h4 : h4          1.2em        1em              $base-line-height   $heading-weight   $heading-family   !default;
+$h5 : h5          1em          1em              $base-line-height   $heading-weight   $heading-family   !default;
+$h6 : h6          .9em         .9em             $base-line-height   $heading-weight   $heading-family   !default;
 
 $headings: $h1, $h2, $h3, $h4, $h5, $h6;
 

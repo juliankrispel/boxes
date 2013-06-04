@@ -4,7 +4,9 @@
 .inline           { display: inline; }
 
 .no-margin        { margin: 0; }
+.no-padding       { padding: 0; }
 .no-bottom-margin { margin-bottom: 0; }
+.no-radius        { border-radius: 0; }
 
 .left             { float: left !important; }
 .right            { float: right !important; }
@@ -16,7 +18,36 @@
 
 .hide             { display: none; }
 
-@media(max-width: $small-screen){ .small-hide{ display: none; } }
+@media(max-width: $small-screen){ 
+    .small-text-left        { text-align: left !important; }
+    .small-text-right       { text-align: right !important; }
+    .small-text-center      { text-align: center !important; }
+    .small-text-justify     { text-align: justify !important; }
+    .small-hide             { display: none; } 
+
+    .small-no-padding       { padding: 0; }
+    .small-no-margin        { margin: 0; }
+}
+
+@media(max-width: $tiny-screen){
+    .tiny-text-left        { text-align: left !important; }
+    .tiny-text-right       { text-align: right !important; }
+    .tiny-text-center      { text-align: center !important; }
+    .tiny-text-justify     { text-align: justify !important; }
+    .tiny-hide             { display: none; } 
+
+    .tiny-no-padding       { padding: 0; }
+    .tiny-no-margin        { margin: 0; }
+
+}
+
+@media(min-width: $small-screen){
+    .large-hide{ display: none; }
+}
+
+.lt-ie9{
+    .large-hide{ display: none; }
+}
 
 // Using this: http://stackoverflow.com/questions/1030793/input-with-displayblock-is-not-a-block-why-not 
 .full-width{

@@ -14,6 +14,7 @@
 @import "defaults/grid";
 @import "defaults/list";
 @import "defaults/panel";
+@import "defaults/breadcrumbs";
 @import "defaults/typography";
 
 @import "modules/base";
@@ -24,5 +25,5 @@
 @import "modules/list";
 @import "modules/panel";
 @import "modules/typography";
-@import "modules/helper";
 @import "modules/margin";
+@import "modules/helper";

@@ -1,6 +1,6 @@
 @import "compass/css3/box-shadow";
 
-.panel{
+%panel{
     padding: $panel-padding;
     @include clearfix();
     background: $panel-background;
@@ -11,5 +11,57 @@
     margin-bottom: $panel-margin-bottom;
     > *{
         color: inherit;
+    }
+}
+
+.panel{
+    @extend %panel;
+}
+
+@media(max-width: $small-screen){
+    .small-panel{
+        padding: $panel-padding;
+        @include clearfix();
+        background: $panel-background;
+        color: $panel-font-color;
+        border: $panel-border;
+        @include box-shadow($panel-box-shadow);
+        border-radius: $panel-border-radius;
+        margin-bottom: $panel-margin-bottom;
+        > *{
+            color: inherit;
+        }
+    }
+}
+
+@media(min-width: $small-screen){
+    .large-panel{
+        padding: $panel-padding;
+        @include clearfix();
+        background: $panel-background;
+        color: $panel-font-color;
+        border: $panel-border;
+        @include box-shadow($panel-box-shadow);
+        border-radius: $panel-border-radius;
+        margin-bottom: $panel-margin-bottom;
+        > *{
+            color: inherit;
+        }
+    }
+}
+
+.lt-ie9{
+    .large-panel{
+        padding: $panel-padding;
+        @include clearfix();
+        background: $panel-background;
+        color: $panel-font-color;
+        border: $panel-border;
+        @include box-shadow($panel-box-shadow);
+        border-radius: $panel-border-radius;
+        margin-bottom: $panel-margin-bottom;
+        > *{
+            color: inherit;
+        }    
     }
 }

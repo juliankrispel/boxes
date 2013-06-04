@@ -3,9 +3,12 @@
 @each $heading in $headings{
     #{nth($heading, 1)}, .#{nth($heading, 1)}{
         font-size: nth($heading, 2);
-        line-height: nth($heading, 3);
-        font-weight: nth($heading, 4);
-        font-family: nth($heading, 5);
+        @media(max-width: $small-screen){
+            font-size: nth($heading, 3);
+        }
+        line-height: nth($heading, 4);
+        font-weight: nth($heading, 5);
+        font-family: nth($heading, 6);
         margin: 0;
     }
 }
@@ -14,6 +17,10 @@ p{
     line-height: $base-line-height;
     margin: $paragraph-margin;
 }
+
+.italic     { font-style: italic; }
+.bold       { font-weight: bold; }
+.normal       { font-weight: normal; }
 
 a{
     @include transition($link-transition);
@@ -26,6 +33,9 @@ a{
 
 body{
     font-family: $base-family;
+    @media(max-width: $small-screen){
+        font-size: 15px;
+    }
 }
 
 small, .small{
