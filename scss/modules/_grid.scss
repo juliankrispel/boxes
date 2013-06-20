@@ -22,6 +22,14 @@
         .large-offset-#{$i}{
             margin-left: percentage(($i / $column-number));
         }
+
+        @for $i from 1 to $column-number {
+            .large-block-grid-#{$i}{
+                & > *:nth-child(#{$i}n + 1){
+                    clear: both;
+                }
+            }
+        }
     }
 
     @media(max-width: $small-screen){
@@ -33,6 +41,13 @@
             margin-left: percentage(($i / $column-number));
         }
 
+        @for $i from 1 to $column-number {
+            .small-block-grid-#{$i}{
+                & > *:nth-child(#{$i}n + 1){
+                    clear: both;
+                }
+            }
+        }
     }
 
     @media(max-width: $tiny-screen){
@@ -42,6 +57,14 @@
 
         .tiny-offset-#{$i}{
             margin-left: percentage(($i / $column-number));
+        }
+
+        @for $i from 1 to $column-number {
+            .tiny-block-grid-#{$i}{
+                & > *:nth-child(#{$i}n + 1){
+                    clear: both;
+                }
+            }
         }
     }
 
@@ -53,14 +76,13 @@
         .large-offset-#{$i}{
             margin-left: percentage(($i / $column-number));
         }
-    }
-}
 
-// Generate Rows
-@for $i from 1 to $column-number {
-    .block-grid-#{$i}{
-        & > *:nth-child(#{$i}n + 1){
-            clear: both;
+        @for $i from 1 to $column-number {
+            .large-block-grid-#{$i}{
+                & > *:nth-child(#{$i}n + 1){
+                    clear: both;
+                }
+            }
         }
     }
 }
