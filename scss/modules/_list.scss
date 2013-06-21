@@ -55,6 +55,40 @@ ul .no-list-style{
     }
 }
 
+@media(min-width: $small-screen){
+    .large-inline-list{
+        padding-left: 0;
+        margin: 0;
+
+        > *{
+            vertical-align: middle;
+            display: inline-block;
+            margin-right: $inline-list-margin;
+
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media(max-width: $small-screen){
+    .small-inline-list{
+        padding-left: 0;
+        margin: 0;
+
+        > *{
+            vertical-align: middle;
+            display: inline-block;
+            margin-right: $inline-list-margin;
+
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
 /*
  * Custom List
  * 

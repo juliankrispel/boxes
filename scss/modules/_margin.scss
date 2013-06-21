@@ -27,7 +27,7 @@ $rulenames: margin, padding;
         .#{$classname}#{$c}-s {
             #{$rulename}#{$d}: $margin-small;
         }
-        .#{$classname}#{$c}-t {
+        .#{$classname}#{$c}-tiny {
             #{$rulename}#{$d}: $margin-tiny;
         }
 
@@ -37,7 +37,7 @@ $rulenames: margin, padding;
                 #{$rulename}: $margin;
             }
             .small-#{$classname}-s {
-                #{$rulename}: $margin-tiny;
+                #{$rulename}: $margin-small;
             }
             .small-#{$classname}#{$c}-l {
                 #{$rulename}#{$d}: $margin-large;
@@ -48,7 +48,7 @@ $rulenames: margin, padding;
             .small-#{$classname}#{$c}-s {
                 #{$rulename}#{$d}: $margin-small;
             }
-            .small-#{$classname}#{$c}-t {
+            .small-#{$classname}#{$c}-tiny {
                 #{$rulename}#{$d}: $margin-tiny;
             }
         }
@@ -58,7 +58,7 @@ $rulenames: margin, padding;
                 #{$rulename}: $margin;
             }
             .tiny-#{$classname}-s {
-                #{$rulename}: $margin-tiny;
+                #{$rulename}: $margin-small;
             }
             .tiny-#{$classname}#{$c}-l {
                 #{$rulename}#{$d}: $margin-large;
@@ -69,7 +69,7 @@ $rulenames: margin, padding;
             .tiny-#{$classname}#{$c}-s {
                 #{$rulename}#{$d}: $margin-small;
             }
-            .tiny-#{$classname}#{$c}-t {
+            .tiny-#{$classname}#{$c}-tiny {
                 #{$rulename}#{$d}: $margin-tiny;
             }
 
@@ -82,7 +82,7 @@ $rulenames: margin, padding;
                 #{$rulename}: $margin;
             }
             .large-#{$classname}-s {
-                #{$rulename}: $margin-tiny;
+                #{$rulename}: $margin-small;
             }
             .large-#{$classname}#{$c}-l {
                 #{$rulename}#{$d}: $margin-large;
@@ -93,7 +93,7 @@ $rulenames: margin, padding;
             .large-#{$classname}#{$c}-s {
                 #{$rulename}#{$d}: $margin-small;
             }
-            .large-#{$classname}#{$c}-t {
+            .large-#{$classname}#{$c}-tiny {
                 #{$rulename}#{$d}: $margin-tiny;
             }
 
@@ -104,7 +104,7 @@ $rulenames: margin, padding;
                 #{$rulename}: $margin;
             }
             .large-#{$classname}-s {
-                #{$rulename}: $margin-tiny;
+                #{$rulename}: $margin-small;
             }
             .large-#{$classname}#{$c}-l {
                 #{$rulename}#{$d}: $margin-large;
@@ -115,7 +115,7 @@ $rulenames: margin, padding;
             .large-#{$classname}#{$c}-s {
                 #{$rulename}#{$d}: $margin-small;
             }
-            .large-#{$classname}#{$c}-t {
+            .large-#{$classname}#{$c}-tiny {
                 #{$rulename}#{$d}: $margin-tiny;
             }
         }
