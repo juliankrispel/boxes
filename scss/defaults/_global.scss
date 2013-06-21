@@ -1,3 +1,6 @@
+$body-background:   none !default;
+$global-box-sizing: border-box !default;
+
 // Breakpoints
 $small-screen: 768px !default;
 $tiny-screen: 480px !default;
@@ -13,6 +16,7 @@ $border-radius: 3px !default;
 // Typography
 $line-height: 1.35em !default;
 $base-font-size: 16px !default;
+$small-base-font-size: $base-font-size !default;
 
 // Colors
 // Font Colors

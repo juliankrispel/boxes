@@ -31,13 +31,30 @@ a{
     }
 }
 
-body{
+%base-font-settings{
     font-family: $base-family;
+    font-size: $base-font-size;
     @media(max-width: $small-screen){
-        font-size: 15px;
+        font-size: $small-base-font-size;
     }
+}
+
+body{
+    @extend %base-font-settings;
 }
 
 small, .small{
     font-size: $small;
+}
+
+.warn{
+    color: $color-warn;
+}
+
+.success{
+    color: $color-success;
+}
+
+.highlight{
+    color: $color-highlight;
 }

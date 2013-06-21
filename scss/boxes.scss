@@ -4,18 +4,15 @@
 
 //Always load settings before defaults (Settings override defaults
 
-@import "normalize";
-
 @import "defaults/settings";
-@import "defaults/base";
-@import "defaults/button";
-@import "defaults/form";
 @import "defaults/global";
+@import "defaults/button";
+@import "defaults/typography";
+@import "defaults/form";
 @import "defaults/grid";
 @import "defaults/list";
 @import "defaults/panel";
 @import "defaults/breadcrumbs";
-@import "defaults/typography";
 
 @import "modules/base";
 @import "modules/breadcrumbs";
