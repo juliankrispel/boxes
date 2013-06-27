@@ -4,10 +4,12 @@
 
 //Always load settings before defaults (Settings override defaults
 
+@import "defaults/colours";
 @import "defaults/settings";
 @import "defaults/global";
-@import "defaults/button";
+@import "defaults/table";
 @import "defaults/typography";
+@import "defaults/button";
 @import "defaults/form";
 @import "defaults/grid";
 @import "defaults/list";
@@ -15,6 +17,7 @@
 @import "defaults/breadcrumbs";
 
 @import "modules/base";
+@import "modules/table";
 @import "modules/breadcrumbs";
 @import "modules/button";
 @import "modules/form";

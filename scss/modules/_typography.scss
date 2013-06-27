@@ -48,13 +48,17 @@ small, .small{
 }
 
 .warn{
-    color: $color-warn;
+    color: $text-color-warn;
+}
+
+.error{
+    color: $text-color-warn;
+}
+
+.muted{
+    color: $text-color-muted;
 }
 
 .success{
-    color: $color-success;
-}
-
-.highlight{
-    color: $color-highlight;
+    color: $text-color-success;
 }
