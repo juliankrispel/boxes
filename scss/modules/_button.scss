@@ -10,22 +10,16 @@
     display: inline-block;
     text-align: center;
     margin: 0;
+    cursor: pointer;
     margin-bottom: $button-margin-bottom;
     @include appearance(none);
     height: auto;
     font-size: $button-font-size;
     padding: $button-padding;
+    text-overflow: ellipsis;
+    @include nowrap;
+    overflow: hidden;
 
-    @if($button-is-flat == false){
-        @include text-shadow(0 -1px 2px lighten($button-background-color, 15));
-        @include box-shadow( 
-            $button-box-shadow, 
-            inset 0 -10px 10px -10px darken($button-background-color, 5),
-            inset 0 10px 10px -10px lighten($button-background-color, 5) 
-        );
-    }else{
-        @include box-shadow($button-box-shadow);
-    }
 
     &:hover{
         background-color: $button-hover-background-color;
@@ -48,15 +42,6 @@
             background-color: $primary-button-hover-background-color;
         }
         border-color: $primary-button-border-color;
-
-        @if($button-is-flat == false){
-            @include text-shadow(0 -1px 2px darken($primary-button-background-color, 7));
-            @include box-shadow( 
-                $primary-button-box-shadow, 
-                inset 0 -10px 10px -10px darken($primary-button-background-color, 5),
-                inset 0 10px 10px -10px lighten($primary-button-background-color, 5) 
-            );
-        }
     }
 }
 
@@ -66,7 +51,7 @@
     display: block;
     margin-bottom: $button-group-margin-bottom;
     @include clearfix();
-    .button, input{
+    .button, input[type="text"]{
         margin-bottom: 0;
         float: left;
         @if($button-border-radius){

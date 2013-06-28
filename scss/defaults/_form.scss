@@ -1,6 +1,6 @@
 $input-line-height: $base-line-height !default;
 $input-font-size: 1em !default;
-$input-padding: .5em .7em !default;
+$input-padding: .32em .7em !default;
 $input-border: 1px solid #ccc !default;
 $input-border-radius: $border-radius;
 $input-margin-bottom: $margin-small !default;
@@ -22,3 +22,7 @@ $fieldset-padding: $margin-small !default;
 $legend-font-size: $small !default;
 $legend-color: $text-color-muted !default;
 $legend-padding: $margin-tiny !default;
+
+$inline-input-border: 1px solid #999 !default;
+$inline-input-width: auto;
+$inline-input-text-align: center;
