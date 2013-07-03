@@ -46,12 +46,16 @@
 }
 
 .btn-group{
+    @extend .row;
     @include nowrap;
     position: relative;
     display: block;
     margin-bottom: $button-group-margin-bottom;
     @include clearfix();
-    .button, input[type="text"]{
+    .button, input{
+        &:not(:last-child){
+            border-right: none;
+        }
         margin-bottom: 0;
         float: left;
         @if($button-border-radius){

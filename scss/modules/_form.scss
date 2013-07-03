@@ -1,4 +1,7 @@
 @import "compass/css3/box-shadow";
+@import "compass/css3/appearance";
+@import "compass/css3/box-sizing";
+
 input:not([type="submit"]), select{
     @include box-shadow($input-box-shadow);
     line-height: $input-line-height;
@@ -6,6 +9,15 @@ input:not([type="submit"]), select{
     border: $input-border;
     border-radius: $input-border-radius;
     padding: $input-padding;
+}
+
+input:not([type="submit"]):not([type="checkbox"]){
+    height: $input-height;
+}
+
+input[type="search"]{
+    @include appearance(textfield);
+    @include box-sizing(border-box);
 }
 
 label, input:not([type="submit"]), select{
@@ -61,6 +73,14 @@ input, select, textarea{
     width: 100%;
 }
 
+input[type="date"]{
+    &::-webkit-inner-spin-button,
+    &::-webkit-calendar-picker-indicator {
+        display: none;
+        -webkit-appearance: none;
+    }
+}
+
 .inline-form{
     input, select{
         display: inline-block;
@@ -85,6 +105,6 @@ input[type="submit"]{
     width: auto;
 }
 
-input, select, textarea, fieldset{
+input:not([type="checkbox"]), select, textarea, fieldset{
     margin-bottom: $input-margin-bottom;
 }
