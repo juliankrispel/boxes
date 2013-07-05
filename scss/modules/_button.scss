@@ -43,6 +43,14 @@
         }
         border-color: $primary-button-border-color;
     }
+
+    &.muted, &.disabled, &[disabled]{
+        opacity: .8;
+        &:hover{
+            background: auto;
+            color: auto;
+        }
+    }
 }
 
 .btn-group{
