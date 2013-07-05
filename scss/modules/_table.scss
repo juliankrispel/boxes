@@ -1,7 +1,10 @@
+@import "compass/css3/border-radius";
+
 table{
     background: $table-background;
     width: 100%;
     line-height: $table-line-height;
+    @include border-radius($table-border-radius);
     border: $table-border;
     thead{
         color: $table-head-font-color;
