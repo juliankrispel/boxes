@@ -46,7 +46,6 @@
 }
 
 .btn-group{
-    @extend .row;
     @include nowrap;
     position: relative;
     display: block;
