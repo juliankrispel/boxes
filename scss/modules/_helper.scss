@@ -31,6 +31,8 @@
 .no-padding-top    { padding-top : 0; }
 .no-padding-bottom { padding-bottom : 0; }
 
+.box-shadow        { @include box-shadow($box-shadow); }
+
 @media(max-width: $small-screen){ 
     .small-left            { float: left; }
     .small-right            { float: right; }
