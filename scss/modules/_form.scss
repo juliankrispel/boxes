@@ -69,8 +69,15 @@ legend{
 }
 
 input, select, textarea{
+    background: $input-background;
     display: block;
     width: 100%;
+    &:hover{
+        border: $input-border-hover;
+    }
+    &:focus, &:active{
+        background: $input-background-active; 
+    }
 }
 
 input[type="date"]{

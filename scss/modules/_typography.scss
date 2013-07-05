@@ -62,3 +62,8 @@ small, .small{
 .success{
     color: $text-color-success;
 }
+
+hr{
+    border: none;
+    border-top: $hr-border;
+}

@@ -32,7 +32,12 @@
 .no-padding-top    { padding-top : 0; }
 .no-padding-bottom { padding-bottom : 0; }
 
-.border-radius     { @include border-radius($border-radius); }
+.border-radius     { 
+    @include border-radius($border-radius); 
+    //Add overflow hidden to round edges when children have backgrounds 
+    overflow: hidden; 
+}
+
 .box-shadow        { @include box-shadow($box-shadow); }
 
 @media(max-width: $small-screen){ 
@@ -115,6 +120,7 @@
 .full-width{
     display: block;
     width:100%;
+    max-width: 100%;
     @include box-sizing(border-box); 
 }
 

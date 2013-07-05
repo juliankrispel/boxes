@@ -61,7 +61,11 @@
     @include clearfix();
     .button, input{
         &:not(:last-child){
-            border-right: none;
+            @if $button-group-separator == none{
+                border-right: none;
+            } @else {
+                border-right: $button-group-separator;
+            }
         }
         margin-bottom: 0;
         float: left;
