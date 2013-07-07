@@ -1,0 +1,13 @@
+// Colors
+
+$text-color-error: #e03e3e !default;
+$text-color-warn: #cb9400 !default;
+$text-color-info: #6472f8 !default;
+$text-color-success: #319b26 !default;
+$text-color-muted: #999 !default;
+
+$background-color-error: #e42b2b !default;
+$background-color-warn: #cb9400 !default;
+$background-color-info: lighten($text-color-info, 20) !default;
+$background-color-success: #319b26 !default;
+$background-color-muted: #999 !default;

@@ -29,7 +29,8 @@ $paragraph-margin               : .5em 0 !default;
 
 // Small
 
-$small                          : .7em !default;
+$small                          : .85em !default;
+$large                          : 1.23em !default;
 
 // Links
 
@@ -38,8 +39,4 @@ $link-text-decoration           : underline !default;
 $link-hover-color               : $primary-color !default;
 $link-transition                : $transition !default;
 
-// Colors
-
-$color-warn: #e42b2b;
-$color-success: #319b26;
-$color-highlight: #cb9400;
+$hr-border                      : 1px solid #ccc !default;

@@ -1,0 +1,45 @@
+@import "compass/css3/border-radius";
+
+table{
+    background: $table-background;
+    width: 100%;
+    line-height: $table-line-height;
+    @include border-radius($table-border-radius);
+    border: $table-border;
+    thead{
+        color: $table-head-font-color;
+        background: $table-head-background;
+    }
+    tbody, tfoot, tr{
+        text-align: $cell-text-align;
+        width: 100%;
+    }
+    tr{
+        border-bottom: $row-border;
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+    th{
+        font-weight: $table-head-font-weight;
+    }
+    th, td{
+        white-space: nowrap;
+        padding: $cell-padding;
+        *{
+            vertical-align: middle;
+        }
+        @if($last-column-align-right){
+            &:last-child{
+                text-align: right;
+            }
+        }
+    }
+    
+    &.striped{
+        tbody tr{
+            &:nth-of-type(odd) { background: $table-striped-odd-background; }
+            &:nth-of-type(even) { background: $table-striped-even-background; }
+        }
+    }
+}

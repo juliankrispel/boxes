@@ -1,7 +1,9 @@
 @import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
 
 .relative         { position: relative; }
 
+.block            { display: block; }
 .inline-block     { display: inline-block; }
 .inline           { display: inline; }
 
@@ -29,6 +31,14 @@
 .no-padding-left   { padding-left : 0; }
 .no-padding-top    { padding-top : 0; }
 .no-padding-bottom { padding-bottom : 0; }
+
+.border-radius     { 
+    @include border-radius($border-radius); 
+    //Add overflow hidden to round edges when children have backgrounds 
+    overflow: hidden; 
+}
+
+.box-shadow        { @include box-shadow($box-shadow); }
 
 @media(max-width: $small-screen){ 
     .small-left            { float: left; }
@@ -110,5 +120,13 @@
 .full-width{
     display: block;
     width:100%;
+    max-width: 100%;
     @include box-sizing(border-box); 
+}
+
+.overflow-x-scroll{
+    max-width: 100%;
+    overflow-x: auto;
+    position: relative;
+    display: block;
 }

@@ -1,0 +1,32 @@
+$sizes: large small tiny;
+$directions: bottom top left right;
+
+@each $direction in $directions{
+    @each $size in $sizes{
+        @if($size == large){
+            @media(min-width: $small-screen){
+                .#{$size}-border-#{$direction}{
+
+                    border-#{$direction}: $border-width $border-style $border-color;
+                }
+            }
+        }
+        @if($size == small){
+            @media(max-width: $small-screen){
+                .#{$size}-border-#{$direction}{
+
+                    border-#{$direction}: $border-width $border-style $border-color;
+                }
+            }
+        }
+        @if($size == tiny){
+            @media(max-width: $tiny-screen){
+                .#{$size}-border-#{$direction}{
+
+                    border-#{$direction}: $border-width $border-style $border-color;
+                }
+            }
+        }
+    }
+}
+

@@ -4,8 +4,8 @@
  * Mostly used in "modules/_button.scss"
  */
 
-$button-padding: 1em 1.3em !default;
-$button-font-size: emCalc(14px) !default;
+$button-padding: .5em .8em !default;
+$button-font-size: $base-font-size !default;
 $button-font-color: $secondary-color !default;
 $button-letter-spacing: 0 !default;
 $button-font-weight: bold !default;
@@ -20,11 +20,11 @@ $button-transition: $transition !default;
 $button-line-height: $line-height !default;
 $button-margin-bottom: $margin !default;
 
-$small-button-font-size: emCalc(12px) !default;
-$small-button-padding: $button-padding !default;
+$small-button-font-size: $small !default;
+$small-button-padding: .4em .7em !default;
 
-$large-button-font-size: 1.5em !default;
-$large-button-padding: $button-padding !default;
+$large-button-font-size: $large !default;
+$large-button-padding: .75em .9em !default;
 
 $tiny-button-padding: $button-padding !default;
 $tiny-button-font-size: .81em !default;
@@ -36,4 +36,4 @@ $primary-button-border-color: darken($primary-color, 8) !default;
 $primary-button-box-shadow: 0 2px darken($primary-color, 5) !default;
 
 $button-group-margin-bottom: $button-margin-bottom !default;
-
+$button-group-separator: $input-border !default;
