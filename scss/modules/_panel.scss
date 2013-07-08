@@ -9,9 +9,6 @@
     @include box-shadow($panel-box-shadow);
     border-radius: $panel-border-radius;
     margin-bottom: $panel-margin-bottom;
-    > *{
-        color: inherit;
-    }
 }
 
 .panel{
