@@ -57,10 +57,13 @@
     @include nowrap;
     position: relative;
     display: block;
+    width: auto;
+    min-width: 100px;
     margin-bottom: $button-group-margin-bottom;
     @include clearfix();
-    .button, input{
+    .button, input:not([type="checkbox"]){
         &:not(:last-child){
+            width: auto;
             @if $button-group-separator == none{
                 border-right: none;
             } @else {
