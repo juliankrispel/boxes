@@ -15,61 +15,61 @@ $rulenames: margin, padding;
         .#{$classname} {
             #{$rulename}: $margin;
         }
-        .#{$classname}-s {
+        .#{$classname}--s {
             #{$rulename}: $margin-small;
         }
-        .#{$classname}#{$c}-l {
+        .#{$classname}#{$c}--l {
             #{$rulename}#{$d}: $margin-large;
         }
         .#{$classname}#{$c} {
             #{$rulename}#{$d}: $margin;
         }
-        .#{$classname}#{$c}-s {
+        .#{$classname}#{$c}--s {
             #{$rulename}#{$d}: $margin-small;
         }
-        .#{$classname}#{$c}-t {
+        .#{$classname}#{$c}--t {
             #{$rulename}#{$d}: $margin-tiny;
         }
 
 
         @media(max-width: $small-screen){
-            .small-#{$classname} {
+            .tablet-#{$classname} {
                 #{$rulename}: $margin;
             }
-            .small-#{$classname}-s {
+            .tablet-#{$classname}--s {
                 #{$rulename}: $margin-tiny;
             }
-            .small-#{$classname}#{$c}-l {
+            .tablet-#{$classname}#{$c}--l {
                 #{$rulename}#{$d}: $margin-large;
             }
-            .small-#{$classname}#{$c} {
+            .tablet-#{$classname}#{$c} {
                 #{$rulename}#{$d}: $margin;
             }
-            .small-#{$classname}#{$c}-s {
+            .tablet-#{$classname}#{$c}--s {
                 #{$rulename}#{$d}: $margin-small;
             }
-            .small-#{$classname}#{$c}-t {
+            .tablet-#{$classname}#{$c}--t {
                 #{$rulename}#{$d}: $margin-tiny;
             }
         }
 
         @media(max-width: $tiny-screen){
-            .tiny-#{$classname} {
+            .mobile-#{$classname} {
                 #{$rulename}: $margin;
             }
-            .tiny-#{$classname}-s {
+            .mobile-#{$classname}--s {
                 #{$rulename}: $margin-tiny;
             }
-            .tiny-#{$classname}#{$c}-l {
+            .mobile-#{$classname}#{$c}--l {
                 #{$rulename}#{$d}: $margin-large;
             }
-            .tiny-#{$classname}#{$c} {
+            .mobile-#{$classname}#{$c} {
                 #{$rulename}#{$d}: $margin;
             }
-            .tiny-#{$classname}#{$c}-s {
+            .mobile-#{$classname}#{$c}--s {
                 #{$rulename}#{$d}: $margin-small;
             }
-            .tiny-#{$classname}#{$c}-t {
+            .mobile-#{$classname}#{$c}--t {
                 #{$rulename}#{$d}: $margin-tiny;
             }
 
@@ -78,44 +78,44 @@ $rulenames: margin, padding;
 
 
         @media(min-width: $small-screen){
-            .large-#{$classname} {
+            .desktop-#{$classname} {
                 #{$rulename}: $margin;
             }
-            .large-#{$classname}-s {
+            .desktop-#{$classname}--s {
                 #{$rulename}: $margin-tiny;
             }
-            .large-#{$classname}#{$c}-l {
+            .desktop-#{$classname}#{$c}--l {
                 #{$rulename}#{$d}: $margin-large;
             }
-            .large-#{$classname}#{$c} {
+            .desktop-#{$classname}#{$c} {
                 #{$rulename}#{$d}: $margin;
             }
-            .large-#{$classname}#{$c}-s {
+            .desktop-#{$classname}#{$c}--s {
                 #{$rulename}#{$d}: $margin-small;
             }
-            .large-#{$classname}#{$c}-t {
+            .desktop-#{$classname}#{$c}--t {
                 #{$rulename}#{$d}: $margin-tiny;
             }
 
         }
 
         .lt-ie9 {
-            .large-#{$classname} {
+            .desktop-#{$classname} {
                 #{$rulename}: $margin;
             }
-            .large-#{$classname}-s {
+            .desktop-#{$classname}--s {
                 #{$rulename}: $margin-tiny;
             }
-            .large-#{$classname}#{$c}-l {
+            .desktop-#{$classname}#{$c}--l {
                 #{$rulename}#{$d}: $margin-large;
             }
-            .large-#{$classname}#{$c} {
+            .desktop-#{$classname}#{$c} {
                 #{$rulename}#{$d}: $margin;
             }
-            .large-#{$classname}#{$c}-s {
+            .desktop-#{$classname}#{$c}--s {
                 #{$rulename}#{$d}: $margin-small;
             }
-            .large-#{$classname}#{$c}-t {
+            .desktop-#{$classname}#{$c}--t {
                 #{$rulename}#{$d}: $margin-tiny;
             }
         }
