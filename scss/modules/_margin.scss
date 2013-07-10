@@ -15,61 +15,79 @@ $rulenames: margin, padding;
         .#{$classname} {
             #{$rulename}: $margin;
         }
-        .#{$classname}-s {
+        .#{$classname}--s {
             #{$rulename}: $margin-small;
         }
-        .#{$classname}#{$c}-l {
+        .#{$classname}--t {
+            #{$rulename}: $margin-tiny;
+        }
+        .#{$classname}--l {
+            #{$rulename}: $margin-large;
+        }
+        .#{$classname}#{$c}--l {
             #{$rulename}#{$d}: $margin-large;
         }
         .#{$classname}#{$c} {
             #{$rulename}#{$d}: $margin;
         }
-        .#{$classname}#{$c}-s {
+        .#{$classname}#{$c}--s {
             #{$rulename}#{$d}: $margin-small;
         }
-        .#{$classname}#{$c}-tiny {
+        .#{$classname}#{$c}--t {
             #{$rulename}#{$d}: $margin-tiny;
         }
 
 
         @media(max-width: $small-screen){
-            .small-#{$classname} {
+            .tablet-#{$classname} {
                 #{$rulename}: $margin;
             }
-            .small-#{$classname}-s {
-                #{$rulename}: $margin-small;
+            .tablet-#{$classname}--s {
+                #{$rulename}: $margin-tiny;
             }
-            .small-#{$classname}#{$c}-l {
+            .tablet-#{$classname}--t {
+                #{$rulename}: $margin-tiny;
+            }
+            .tablet-#{$classname}--l {
+                #{$rulename}: $margin-large;
+            }
+            .tablet-#{$classname}#{$c}--l {
                 #{$rulename}#{$d}: $margin-large;
             }
-            .small-#{$classname}#{$c} {
+            .tablet-#{$classname}#{$c} {
                 #{$rulename}#{$d}: $margin;
             }
-            .small-#{$classname}#{$c}-s {
+            .tablet-#{$classname}#{$c}--s {
                 #{$rulename}#{$d}: $margin-small;
             }
-            .small-#{$classname}#{$c}-tiny {
+            .tablet-#{$classname}#{$c}--t {
                 #{$rulename}#{$d}: $margin-tiny;
             }
         }
 
         @media(max-width: $tiny-screen){
-            .tiny-#{$classname} {
+            .mobile-#{$classname} {
                 #{$rulename}: $margin;
             }
-            .tiny-#{$classname}-s {
-                #{$rulename}: $margin-small;
+            .mobile-#{$classname}--s {
+                #{$rulename}: $margin-tiny;
             }
-            .tiny-#{$classname}#{$c}-l {
+            .mobile-#{$classname}--t {
+                #{$rulename}: $margin-tiny;
+            }
+            .mobile-#{$classname}--l {
+                #{$rulename}: $margin-large;
+            }
+            .mobile-#{$classname}#{$c}--l {
                 #{$rulename}#{$d}: $margin-large;
             }
-            .tiny-#{$classname}#{$c} {
+            .mobile-#{$classname}#{$c} {
                 #{$rulename}#{$d}: $margin;
             }
-            .tiny-#{$classname}#{$c}-s {
+            .mobile-#{$classname}#{$c}--s {
                 #{$rulename}#{$d}: $margin-small;
             }
-            .tiny-#{$classname}#{$c}-tiny {
+            .mobile-#{$classname}#{$c}--t {
                 #{$rulename}#{$d}: $margin-tiny;
             }
 
@@ -78,44 +96,56 @@ $rulenames: margin, padding;
 
 
         @media(min-width: $small-screen){
-            .large-#{$classname} {
+            .desktop-#{$classname} {
                 #{$rulename}: $margin;
             }
-            .large-#{$classname}-s {
-                #{$rulename}: $margin-small;
+            .desktop-#{$classname}--s {
+                #{$rulename}: $margin-tiny;
             }
-            .large-#{$classname}#{$c}-l {
+            .desktop-#{$classname}--t {
+                #{$rulename}: $margin-tiny;
+            }
+            .desktop-#{$classname}--l {
+                #{$rulename}: $margin-large;
+            }
+            .desktop-#{$classname}#{$c}--l {
                 #{$rulename}#{$d}: $margin-large;
             }
-            .large-#{$classname}#{$c} {
+            .desktop-#{$classname}#{$c} {
                 #{$rulename}#{$d}: $margin;
             }
-            .large-#{$classname}#{$c}-s {
+            .desktop-#{$classname}#{$c}--s {
                 #{$rulename}#{$d}: $margin-small;
             }
-            .large-#{$classname}#{$c}-tiny {
+            .desktop-#{$classname}#{$c}--t {
                 #{$rulename}#{$d}: $margin-tiny;
             }
 
         }
 
         .lt-ie9 {
-            .large-#{$classname} {
+            .desktop-#{$classname} {
                 #{$rulename}: $margin;
             }
-            .large-#{$classname}-s {
-                #{$rulename}: $margin-small;
+            .desktop-#{$classname}--s {
+                #{$rulename}: $margin-tiny;
             }
-            .large-#{$classname}#{$c}-l {
+            .desktop-#{$classname}--t {
+                #{$rulename}: $margin-tiny;
+            }
+            .desktop-#{$classname}--l {
+                #{$rulename}: $margin-large;
+            }
+            .desktop-#{$classname}#{$c}--l {
                 #{$rulename}#{$d}: $margin-large;
             }
-            .large-#{$classname}#{$c} {
+            .desktop-#{$classname}#{$c} {
                 #{$rulename}#{$d}: $margin;
             }
-            .large-#{$classname}#{$c}-s {
+            .desktop-#{$classname}#{$c}--s {
                 #{$rulename}#{$d}: $margin-small;
             }
-            .large-#{$classname}#{$c}-tiny {
+            .desktop-#{$classname}#{$c}--t {
                 #{$rulename}#{$d}: $margin-tiny;
             }
         }

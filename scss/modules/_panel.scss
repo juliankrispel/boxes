@@ -9,9 +9,6 @@
     @include box-shadow($panel-box-shadow);
     border-radius: $panel-border-radius;
     margin-bottom: $panel-margin-bottom;
-    > *{
-        color: inherit;
-    }
 }
 
 .panel{
@@ -19,7 +16,7 @@
 }
 
 @media(max-width: $small-screen){
-    .small-panel{
+    .tablet-panel{
         padding: $panel-padding;
         @include clearfix();
         background: $panel-background;
@@ -35,7 +32,7 @@
 }
 
 @media(min-width: $small-screen){
-    .large-panel{
+    .desktop-panel{
         padding: $panel-padding;
         @include clearfix();
         background: $panel-background;
@@ -51,7 +48,7 @@
 }
 
 .lt-ie9{
-    .large-panel{
+    .desktop-panel{
         padding: $panel-padding;
         @include clearfix();
         background: $panel-background;

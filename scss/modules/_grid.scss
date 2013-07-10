@@ -15,16 +15,16 @@
 @for $i from 1 through $column-number {
 
     @media(min-width: $small-screen){
-        .large-#{$i}{
+        .desktop-#{$i}{
             width: percentage(($i / $column-number));
         }
         
-        .large-offset-#{$i}{
+        .desktop-offset-#{$i}{
             margin-left: percentage(($i / $column-number));
         }
 
         @for $i from 1 to $column-number {
-            .large-block-grid-#{$i}{
+            .desktop-block-grid-#{$i}{
                 & > *:nth-child(#{$i}n + 1){
                     clear: both;
                 }
@@ -33,16 +33,16 @@
     }
 
     @media(max-width: $small-screen){
-        .small-#{$i}{
+        .tablet-#{$i}{
             width: percentage(($i / $column-number));
         }
 
-        .small-offset-#{$i}{
+        .tablet-offset-#{$i}{
             margin-left: percentage(($i / $column-number));
         }
 
         @for $i from 1 to $column-number {
-            .small-block-grid-#{$i}{
+            .tablet-block-grid-#{$i}{
                 & > *:nth-child(#{$i}n + 1){
                     clear: both;
                 }
@@ -51,16 +51,16 @@
     }
 
     @media(max-width: $tiny-screen){
-        .tiny-#{$i}{
+        .mobile-#{$i}{
             width: percentage(($i / $column-number));
         }
 
-        .tiny-offset-#{$i}{
+        .mobile-offset-#{$i}{
             margin-left: percentage(($i / $column-number));
         }
 
         @for $i from 1 to $column-number {
-            .tiny-block-grid-#{$i}{
+            .mobile-block-grid-#{$i}{
                 & > *:nth-child(#{$i}n + 1){
                     clear: both;
                 }
@@ -69,16 +69,16 @@
     }
 
     .lt-ie9 {
-        .large-#{$i}{
+        .desktop-#{$i}{
             width: percentage(($i / $column-number));
         } 
 
-        .large-offset-#{$i}{
+        .desktop-offset-#{$i}{
             margin-left: percentage(($i / $column-number));
         }
 
         @for $i from 1 to $column-number {
-            .large-block-grid-#{$i}{
+            .desktop-block-grid-#{$i}{
                 & > *:nth-child(#{$i}n + 1){
                     clear: both;
                 }
