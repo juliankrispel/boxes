@@ -43,7 +43,7 @@ $rulenames: margin, padding;
                 #{$rulename}: $margin;
             }
             .tablet-#{$classname}--s {
-                #{$rulename}: $margin-tiny;
+                #{$rulename}: $margin-small;
             }
             .tablet-#{$classname}--t {
                 #{$rulename}: $margin-tiny;
@@ -100,7 +100,7 @@ $rulenames: margin, padding;
                 #{$rulename}: $margin;
             }
             .desktop-#{$classname}--s {
-                #{$rulename}: $margin-tiny;
+                #{$rulename}: $margin-small;
             }
             .desktop-#{$classname}--t {
                 #{$rulename}: $margin-tiny;
@@ -128,7 +128,7 @@ $rulenames: margin, padding;
                 #{$rulename}: $margin;
             }
             .desktop-#{$classname}--s {
-                #{$rulename}: $margin-tiny;
+                #{$rulename}: $margin-small;
             }
             .desktop-#{$classname}--t {
                 #{$rulename}: $margin-tiny;
@@ -149,7 +149,6 @@ $rulenames: margin, padding;
                 #{$rulename}#{$d}: $margin-tiny;
             }
         }
-
         $i: $i - 1;
     }
     $x: $x - 1;
