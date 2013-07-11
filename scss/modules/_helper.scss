@@ -31,6 +31,9 @@
 .no-padding-left   { padding-left : 0; }
 .no-padding-top    { padding-top : 0; }
 .no-padding-bottom { padding-bottom : 0; }
+.bg-primary        { background: $primary-background-color; }
+.bg-secondary      { background: $secondary-background-color; }
+.vertical-middle   { vertical-align: middle; }
 
 .border-radius     { 
     @include border-radius($border-radius); 

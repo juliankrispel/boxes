@@ -58,7 +58,6 @@
     position: relative;
     display: block;
     width: auto;
-    min-width: 100px;
     margin-bottom: $button-group-margin-bottom;
     @include clearfix();
     .button, input:not([type="checkbox"]){
@@ -82,4 +81,9 @@
             }
         }
     }
+}
+
+.btn-group__label{
+    font-size: .85em;
+    padding: .8em;
 }

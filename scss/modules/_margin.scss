@@ -18,6 +18,12 @@ $rulenames: margin, padding;
         .#{$classname}--s {
             #{$rulename}: $margin-small;
         }
+        .#{$classname}--l {
+            #{$rulename}: $margin-large;
+        }
+        .#{$classname}--t {
+            #{$rulename}: $margin-tiny;
+        }
         .#{$classname}#{$c}--l {
             #{$rulename}#{$d}: $margin-large;
         }
@@ -37,6 +43,12 @@ $rulenames: margin, padding;
                 #{$rulename}: $margin;
             }
             .tablet-#{$classname}--s {
+                #{$rulename}: $margin-small;
+            }
+            .tablet-#{$classname}--l {
+                #{$rulename}: $margin-large;
+            }
+            .tablet-#{$classname}--t {
                 #{$rulename}: $margin-tiny;
             }
             .tablet-#{$classname}#{$c}--l {
@@ -58,6 +70,12 @@ $rulenames: margin, padding;
                 #{$rulename}: $margin;
             }
             .mobile-#{$classname}--s {
+                #{$rulename}: $margin-small;
+            }
+            .mobile-#{$classname}--l {
+                #{$rulename}: $margin-large;
+            }
+            .mobile-#{$classname}--t {
                 #{$rulename}: $margin-tiny;
             }
             .mobile-#{$classname}#{$c}--l {
@@ -82,6 +100,12 @@ $rulenames: margin, padding;
                 #{$rulename}: $margin;
             }
             .desktop-#{$classname}--s {
+                #{$rulename}: $margin-small;
+            }
+            .desktop-#{$classname}--l {
+                #{$rulename}: $margin-large;
+            }
+            .desktop-#{$classname}--t {
                 #{$rulename}: $margin-tiny;
             }
             .desktop-#{$classname}#{$c}--l {
@@ -104,6 +128,12 @@ $rulenames: margin, padding;
                 #{$rulename}: $margin;
             }
             .desktop-#{$classname}--s {
+                #{$rulename}: $margin-small;
+            }
+            .desktop-#{$classname}--l {
+                #{$rulename}: $margin-large;
+            }
+            .desktop-#{$classname}--t {
                 #{$rulename}: $margin-tiny;
             }
             .desktop-#{$classname}#{$c}--l {

@@ -15,6 +15,10 @@
     @extend %panel;
 }
 
+.panel--muted{
+    background: $panel-muted;
+}
+
 @media(max-width: $small-screen){
     .tablet-panel{
         padding: $panel-padding;
