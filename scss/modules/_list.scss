@@ -25,6 +25,21 @@ ul .no-list-style{
     line-height: $list-line-height;
 }
 
+@mixin inline-list{
+    padding-left: 0;
+    margin: 0;
+
+    > *{
+        vertical-align: middle;
+        display: inline-block;
+        margin-right: $inline-list-margin;
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
 
 /*
  * Inline list 
@@ -41,17 +56,24 @@ ul .no-list-style{
  */
 
 .inline-list{
-    padding-left: 0;
-    margin: 0;
+    @include inline-list;
+}
 
-    > *{
-        vertical-align: middle;
-        display: inline-block;
-        margin-right: $inline-list-margin;
+@media(min-width: $tablet-breakpoint){
+    .desktop-inline-list{
+        @include inline-list;
+    }
+}
 
-        &:last-child{
-            margin-right: 0;
-        }
+@media(max-width: $tablet-breakpoint){
+    .tablet-inline-list{
+        @include inline-list;
+    }
+}
+
+@media(max-width: $mobile-breakpoint){
+    .mobile-inline-list{
+        @include inline-list;
     }
 }
 

@@ -7,82 +7,40 @@
     }
 }
 
-// Generate Columns
-.columns, .column{
-    float: left;
+@mixin grid($device, $column-total, $columns){
+    .#{$device}-#{$columns}{
+        float: left;
+        width: percentage(($columns / $column-total));
+    }
+
+    .#{$device}-offset-#{$columns}{
+        margin-left: percentage(($columns / $column-total));
+    }
+
+    @for $column from 1 to $column-total {
+        .#{$device}-block-grid-#{$columns}{
+            float: left;
+            & > *:nth-child(#{$columns}n + 1){
+                clear: both;
+            }
+        }
+    }
 }
 
-@for $i from 1 through $column-number {
-
-    @media(min-width: $small-screen){
-        .desktop-#{$i}{
-            width: percentage(($i / $column-number));
-        }
-
-        .desktop-offset-#{$i}{
-            margin-left: percentage(($i / $column-number));
-        }
-
-        @for $i from 1 to $column-number {
-            .desktop-block-grid-#{$i}{
-                & > *:nth-child(#{$i}n + 1){
-                    clear: both;
-                }
-            }
-        }
+@for $i from 1 through $column-total {
+    @media(min-width: $tablet-breakpoint){
+        @include grid(desktop, $column-total, $i);
     }
 
-    @media(max-width: $small-screen){
-        .tablet-#{$i}{
-            width: percentage(($i / $column-number));
-        }
-
-        .tablet-offset-#{$i}{
-            margin-left: percentage(($i / $column-number));
-        }
-
-        @for $i from 1 to $column-number {
-            .tablet-block-grid-#{$i}{
-                & > *:nth-child(#{$i}n + 1){
-                    clear: both;
-                }
-            }
-        }
+    @media(max-width: $tablet-breakpoint){
+        @include grid(tablet, $column-total, $i);
     }
 
-    @media(max-width: $tiny-screen){
-        .mobile-#{$i}{
-            width: percentage(($i / $column-number));
-        }
-
-        .mobile-offset-#{$i}{
-            margin-left: percentage(($i / $column-number));
-        }
-
-        @for $i from 1 to $column-number {
-            .mobile-block-grid-#{$i}{
-                & > *:nth-child(#{$i}n + 1){
-                    clear: both;
-                }
-            }
-        }
+    @media(max-width: $mobile-breakpoint){
+        @include grid(mobile, $column-total, $i);
     }
 
     .lt-ie9 {
-        .desktop-#{$i}{
-            width: percentage(($i / $column-number));
-        } 
-
-        .desktop-offset-#{$i}{
-            margin-left: percentage(($i / $column-number));
-        }
-
-        @for $i from 1 to $column-number {
-            .desktop-block-grid-#{$i}{
-                & > *:nth-child(#{$i}n + 1){
-                    clear: both;
-                }
-            }
-        }
+        @include grid(desktop, $column-total, $i);
     }
 }

@@ -19,7 +19,7 @@
     background: $panel-muted;
 }
 
-@media(max-width: $small-screen){
+@media(max-width: $tablet-breakpoint){
     .tablet-panel{
         padding: $panel-padding;
         @include clearfix();
@@ -35,7 +35,7 @@
     }
 }
 
-@media(min-width: $small-screen){
+@media(min-width: $tablet-breakpoint){
     .desktop-panel{
         padding: $panel-padding;
         @include clearfix();

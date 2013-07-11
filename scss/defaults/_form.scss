@@ -29,5 +29,7 @@ $legend-color: $text-color-muted !default;
 $legend-padding: $margin-tiny !default;
 
 $inline-input-border: 1px solid #999 !default;
-$inline-input-width: auto;
-$inline-input-text-align: center;
+$inline-input-width: auto !default;
+$inline-input-text-align: center !default;
+
+$disable-default-webkit-datefield: true !default;

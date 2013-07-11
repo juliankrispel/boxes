@@ -1,109 +1,91 @@
 @import "compass/css3/box-shadow";
-@import "compass/css3/transition";
 @import "compass/css3/appearance";
 @import "compass/css3/box-sizing";
+@import "compass/css3/transition";
 
-input:not([type="submit"]), select{
-    @include box-shadow($input-box-shadow);
-    line-height: $input-line-height;
-    font-size: $input-font-size;
-    border: $input-border;
-    border-radius: $input-border-radius;
-    padding: $input-padding;
-}
-
-input:not([type="submit"]):not([type="checkbox"]){
-    height: $input-height;
-}
-
-input[type="search"]{
-    @include appearance(textfield);
-    @include box-sizing(border-box);
-}
-
-label, input:not([type="submit"]), select{
-    &.large{
-        font-size: $large-input-font-size;
-        @if($large-input-padding != $input-padding){
-            padding: $large-input-padding;
-        }
-    }
-
-    &.small{
-        font-size: $small-input-font-size;
-        @if($small-input-padding != $input-padding){
-            padding: $small-input-padding;
-        }
-    }
-
-    &.tiny{
-        font-size: $tiny-input-font-size;
-        @if($tiny-input-padding != $input-padding){
-            padding: $tiny-input-padding;
-        }
-    }
-}
-
-label{
+%input-base{
     padding: $input-padding;
     font-size: $input-font-size;
     line-height: $input-line-height;
     white-space: nowrap;
-    display: inline-block;
     text-overflow: ellipsis;
+}
+
+.input{
+    @include transition($input-transition);
+    background: $input-background;
+    @extend %input-base;
+    @include box-shadow($input-box-shadow);
+    border: $input-border;
+    border-radius: $input-border-radius;
+    height: $input-height;
+    @include appearance(textfield);
+    @include box-sizing(border-box);
+    display: block;
+    width: 100%;
+}
+
+.label{
+    @extend %input-base;
+    display: inline-block;
     overflow: hidden;
-    &.large, &.small, &.tiny, &{
-        padding-left: 0;
-        padding-right: 0;
+}
+
+$list: input label;
+
+@each $item in $list{
+    .#{$item}--large{
+        font-size: $large-input-font-size;
+        @if($large-input-padding != $input-padding){
+            padding: $large-input-padding;
+        }
+        @if($item == label){
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .#{$item}--small{
+        font-size: $small-input-font-size;
+        @if($small-input-padding != $input-padding){
+            padding: $small-input-padding;
+        }
+        @if($item == label){
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .#{$item}--tiny{
+        font-size: $tiny-input-font-size;
+        @if($tiny-input-padding != $input-padding){
+            padding: $tiny-input-padding;
+        }
+        @if($item == label){
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }
 
-fieldset{
+.fieldset{
     padding: $margin-small;
 }
 
-legend{
+.legend{
     color: $legend-color;
     font-size: $legend-font-size;
     padding: 0 $legend-padding;
     margin: 0 -$legend-padding;
 }
 
-input, select, textarea{
-    @include transition($input-transition);
-    background: $input-background;
-    display: block;
-    width: 100%;
-    &:hover{
-        border: $input-border-hover;
-    }
-    &:focus, &:active{
-        background: $input-background-active; 
-    }
-}
-
-input[type="date"]{
-    &::-webkit-inner-spin-button,
-    &::-webkit-calendar-picker-indicator {
-        display: none;
-        -webkit-appearance: none;
-    }
-}
-
-.inline-form{
-    input, select{
-        display: inline-block;
-        width: auto;
-    }
-    input{
-        border: none;
-        padding-left: 0;
-        padding-right: 0;
-        text-align: $inline-input-text-align;
-        width: $inline-input-width;
-        box-shadow: none;
-        border-radius: none;
-        border-bottom: $inline-input-border;
+@if($disable-default-webkit-datefield == true){
+    input[type="date"]{
+        &::-webkit-inner-spin-button,
+        &::-webkit-calendar-picker-indicator {
+            display: none;
+            -webkit-appearance: none;
+        }
     }
 }
 
@@ -111,10 +93,11 @@ label[for], label.inline-form{
     cursor: pointer;
 }
 
-input[type="submit"]{
-    width: auto;
+.input, .textarea{
+    margin-bottom: $input-margin-bottom;
 }
 
-input:not([type="checkbox"]), select, textarea, fieldset{
-    margin-bottom: $input-margin-bottom;
+.input--inline{
+    display: inline;
+    width: auto;
 }

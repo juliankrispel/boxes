@@ -43,7 +43,7 @@
 
 .box-shadow        { @include box-shadow($box-shadow); }
 
-@media(max-width: $small-screen){ 
+@media(max-width: $tablet-breakpoint){ 
     .tablet-left            { float: left; }
     .tablet-right            { float: right; }
     .tablet-text-left        { text-align: left !important; }
@@ -67,7 +67,7 @@
     .tablet-no-radius        { border-radius: 0; }
 }
 
-@media(max-width: $tiny-screen){
+@media(max-width: $mobile-breakpoint){
     .mobile-left            { float: left; }
     .mobile-right            { float: right; }
     .mobile-text-left        { text-align: left !important; }
@@ -91,7 +91,7 @@
     .mobile-no-radius        { border-radius: 0; }
 }
 
-@media(min-width: $small-screen){
+@media(min-width: $tablet-breakpoint){
     .desktop-left            { float: left; }
     .desktop-right            { float: right; }
     .desktop-text-left        { text-align: left !important; }

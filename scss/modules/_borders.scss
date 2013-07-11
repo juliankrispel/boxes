@@ -1,0 +1,29 @@
+$sizes: desktop tablet mobile;
+$directions: bottom top left right;
+
+@each $direction in $directions{
+    @each $size in $sizes{
+        @if($size == desktop){
+            @media(min-width: $tablet-breakpoint){
+                .#{$size}-border-#{$direction}{
+                    border-#{$direction}: $border-width $border-style $border-color;
+                }
+            }
+        }
+        @if($size == tablet){
+            @media(max-width: $tablet-breakpoint){
+                .#{$size}-border-#{$direction}{
+                    border-#{$direction}: $border-width $border-style $border-color;
+                }
+            }
+        }
+        @if($size == mobile){
+            @media(max-width: $mobile-breakpoint){
+                .#{$size}-border-#{$direction}{
+                    border-#{$direction}: $border-width $border-style $border-color;
+                }
+            }
+        }
+    }
+}
+

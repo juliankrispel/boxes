@@ -20,70 +20,58 @@
     @include nowrap;
     overflow: hidden;
 
-
     &:hover{
         background-color: $button-hover-background-color;
     }
-
-    &.small{
-        font-size: $small-button-font-size;
-        padding: $small-button-padding;
-    }
-
-    &.large{
-        font-size: $large-button-font-size;
-        padding: $large-button-padding;
-    }
-
-    &.primary{
-        background-color: $primary-button-background-color;
-        color: $primary-button-font-color;
-        &:hover{
-            background-color: $primary-button-hover-background-color;
-        }
-        border-color: $primary-button-border-color;
-    }
-
-    &.muted, &.disabled, &[disabled]{
-        opacity: .8;
-        &:hover{
-            background: auto;
-            color: auto;
-        }
-    }
 }
 
-.btn-group{
+.button--small{
+    font-size: $small-button-font-size;
+    padding: $small-button-padding;
+}
+
+.button--large{
+    font-size: $large-button-font-size;
+    padding: $large-button-padding;
+}
+
+.button--primary{
+    background-color: $primary-button-background-color;
+    color: $primary-button-font-color;
+    &:hover{
+        background-color: $primary-button-hover-background-color;
+    }
+    border-color: $primary-button-border-color;
+}
+
+.toolbar{
     @include nowrap;
     position: relative;
     display: block;
-    width: auto;
     margin-bottom: $button-group-margin-bottom;
     @include clearfix();
-    .button, input:not([type="checkbox"]){
-        &:not(:last-child){
-            width: auto;
-            @if $button-group-separator == none{
-                border-right: none;
-            } @else {
-                border-right: $button-group-separator;
-            }
+}
+
+.toolbar__item{
+    &:not(:last-child){
+        border-right: none;
+    }
+
+    margin-bottom: 0;
+    float: left;
+
+    @if($button-border-radius){
+        @include border-radius(0);
+        &:last-child{
+            @include border-radius(0 $button-border-radius $button-border-radius 0);
         }
-        margin-bottom: 0;
-        float: left;
-        @if($button-border-radius){
-            @include border-radius(0);
-            &:last-child{
-                @include border-radius(0 $button-border-radius $button-border-radius 0);
-            }
-            &:first-child{
-                @include border-radius($button-border-radius 0 0 $button-border-radius);
-            }
+        &:first-child{
+            @include border-radius($button-border-radius 0 0 $button-border-radius);
         }
     }
 }
 
-.btn-group__label{
+.toolbar__label{
     font-size: .85em;
     padding: .8em;
 }
