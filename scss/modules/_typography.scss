@@ -3,7 +3,7 @@
 @each $heading in $headings{
     #{nth($heading, 1)}, .#{nth($heading, 1)}{
         font-size: nth($heading, 2);
-        @media(max-width: $small-screen){
+        @media(max-width: $tablet-breakpoint){
             font-size: nth($heading, 3);
         }
         line-height: nth($heading, 4);
@@ -34,7 +34,7 @@ a{
 %base-font-settings{
     font-family: $base-family;
     font-size: $base-font-size;
-    @media(max-width: $small-screen){
+    @media(max-width: $tablet-breakpoint){
         font-size: $small-base-font-size;
     }
 }
