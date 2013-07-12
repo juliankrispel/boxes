@@ -37,7 +37,7 @@ $rulenames: margin, padding;
             #{$rulename}#{$d}: $margin-tiny;
         }
 
-        @media(max-width: $tablet-breakpoint){
+        @media(max-width: $small-screen){
             .tablet-#{$classname} {
                 #{$rulename}: $margin;
             }
@@ -64,7 +64,7 @@ $rulenames: margin, padding;
             }
         }
 
-        @media(max-width: $mobile-breakpoint){
+        @media(max-width: $tiny-screen){
             .mobile-#{$classname} {
                 #{$rulename}: $margin;
             }
@@ -94,7 +94,7 @@ $rulenames: margin, padding;
 
 
 
-        @media(min-width: $tablet-breakpoint){
+        @media(min-width: $small-screen){
             .desktop-#{$classname} {
                 #{$rulename}: $margin;
             }
