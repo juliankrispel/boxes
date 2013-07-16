@@ -2,6 +2,10 @@ $sizes: desktop tablet mobile;
 $directions: bottom top left right;
 
 @each $direction in $directions{
+    .border-#{$direction}{
+        border-#{$direction}: $border-width $border-style $border-color;
+    }
+
     @each $size in $sizes{
         @if($size == desktop){
             @media(min-width: $tablet-breakpoint){
