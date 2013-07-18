@@ -19,12 +19,6 @@ ul{
     line-height: $list-line-height;
 }
 
-// Make sure that nested uls are indented even if no bullet.
-ul .no-list-style{
-    padding-left: $list-padding-left;
-    line-height: $list-line-height;
-}
-
 @mixin inline-list{
     padding-left: 0;
     margin: 0;
