@@ -6,6 +6,11 @@
 .block            { display: block; }
 .inline-block     { display: inline-block; }
 .inline           { display: inline; }
+.ellipsis         { 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 
 .no-margin        { margin: 0; }
 .no-padding       { padding: 0; }

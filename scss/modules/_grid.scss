@@ -28,15 +28,18 @@
 }
 
 @for $i from 1 through $column-total {
-    @media(min-width: $tablet-breakpoint){
+    @media only screen
+    and (min-width: $tablet-breakpoint){
         @include grid(desktop, $column-total, $i);
     }
 
-    @media(max-width: $tablet-breakpoint){
+    @media only screen
+    and (max-width: $tablet-breakpoint){
         @include grid(tablet, $column-total, $i);
     }
 
-    @media(max-width: $mobile-breakpoint){
+    @media only screen
+    and (max-width: $mobile-breakpoint){
         @include grid(mobile, $column-total, $i);
     }
 

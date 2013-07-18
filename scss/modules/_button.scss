@@ -24,7 +24,7 @@
         background-color: $button-hover-background-color;
     }
     &[disabled]:hover{
-        background-color: inherit;
+        background: $button-background-color;;
     }
 }
 
