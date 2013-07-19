@@ -5,13 +5,6 @@
 @import "../mixins/button";
 @import "compass/typography/text/nowrap";
 
-.button[disabled], .button.button--disabled{
-    &:hover{
-        background: $disabled-button-background;
-    }
-}
-
-
 .button{
     @include button-base();
     display: inline-block;
@@ -81,4 +74,14 @@
 .toolbar__label{
     font-size: .85em;
     padding: .8em;
+}
+
+.button[disabled], .button.button--disabled{
+    background: $disabled-button-background;
+    @include box-shadow(none);
+    border: none;
+    color: $disabled-button-color;
+    &:hover{
+        background: $disabled-button-background;
+    }
 }
