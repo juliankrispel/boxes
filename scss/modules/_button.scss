@@ -5,6 +5,13 @@
 @import "../mixins/button";
 @import "compass/typography/text/nowrap";
 
+.button[disabled], .button.button--disabled{
+    &:hover{
+        background: $disabled-button-background;
+    }
+}
+
+
 .button{
     @include button-base();
     display: inline-block;
@@ -22,9 +29,6 @@
 
     &:hover{
         background-color: $button-hover-background-color;
-    }
-    &[disabled]:hover{
-        background: $button-background-color;;
     }
 }
 
