@@ -35,6 +35,7 @@
 
     @media only screen
     and (max-width: $tablet-breakpoint){
+    and (min-width: $mobile-breakpoint)
         @include grid(tablet, $column-total, $i);
     }
 
