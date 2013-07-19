@@ -12,6 +12,10 @@
     overflow: hidden;
 }
 
+.min-width        { min-width: $min-width; }
+.min-width--l     { min-width: $min-width * 1.5; }
+.min-width--s     { min-width: $min-width * .7; }
+.min-width--t     { min-width: $min-width * .4; }
 .no-margin        { margin: 0; }
 .no-padding       { padding: 0; }
 .no-bottom-margin { margin-bottom: 0; }
