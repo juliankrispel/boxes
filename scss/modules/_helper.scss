@@ -12,6 +12,11 @@
     overflow: hidden;
 }
 
+.text-wrap        {
+    white-space: normal;
+    text-overflow: normal;
+}
+
 .min-width        { min-width: $min-width; }
 .min-width--l     { min-width: $min-width * 1.5; }
 .min-width--s     { min-width: $min-width * .7; }
@@ -50,6 +55,16 @@
     overflow: hidden; 
 }
 
+// Using this: http://stackoverflow.com/questions/1030793/input-with-displayblock-is-not-a-block-why-not 
+@mixin full-width(){
+    display: block;
+    width:100%;
+    max-width: 100%;
+    @include box-sizing(border-box); 
+}
+
+.full-width{ @include full-width; }
+
 .box-shadow        { @include box-shadow($box-shadow); }
 
 @media(max-width: $tablet-breakpoint){ 
@@ -74,6 +89,7 @@
     .tablet-no-padding-top    { padding-top : 0; }
     .tablet-no-padding-bottom { padding-bottom : 0; }
     .tablet-no-radius        { border-radius: 0; }
+    .tablet-full-width{ @include full-width; }
 }
 
 @media(max-width: $mobile-breakpoint){
@@ -98,6 +114,8 @@
     .mobile-no-padding-top    { padding-top : 0; }
     .mobile-no-padding-bottom { padding-bottom : 0; }
     .mobile-no-radius        { border-radius: 0; }
+
+    .mobile-full-width{ @include full-width; }
 }
 
 @media(min-width: $tablet-breakpoint){
@@ -122,19 +140,14 @@
     .desktop-no-padding-top    { padding-top : 0; }
     .desktop-no-padding-bottom { padding-bottom : 0; }
     .desktop-no-radius        { border-radius: 0; }
+
+    .desktop-full-width{ @include full-width; }
 }
 
 .lt-ie9{
     .desktop-hide{ display: none; }
 }
 
-// Using this: http://stackoverflow.com/questions/1030793/input-with-displayblock-is-not-a-block-why-not 
-.full-width{
-    display: block;
-    width:100%;
-    max-width: 100%;
-    @include box-sizing(border-box); 
-}
 
 .overflow-x-scroll{
     max-width: 100%;
@@ -142,3 +155,4 @@
     position: relative;
     display: block;
 }
+
