@@ -22,6 +22,7 @@
 
     &:hover{
         background-color: $button-hover-background-color;
+        color: inherit;
     }
 }
 
@@ -40,6 +41,7 @@
     color: $primary-button-font-color;
     &:hover{
         background-color: $primary-button-hover-background-color;
+        color: $primary-button-font-color;
     }
     border-color: $primary-button-border-color;
 }
