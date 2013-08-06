@@ -1,0 +1,18 @@
+// Colors
+
+$text-error: error #e03e3e !default;
+$text-warn: warn #cb9400 !default;
+$text-info: info #6472f8 !default;
+$text-success: success #319b26 !default;
+$text-muted: muted #999 !default;
+
+$text-colors: $text-error $text-warn $text-info $text-success $text-muted !default;
+
+$bg-error: error #e42b2b !default;
+$bg-warn: warn #cb9400 !default;
+$bg-info: info $text-info, 20 !default;
+$bg-success: success #319b26 !default;
+$bg-muted: muted #eee !default;
+$bg-selected: selected #fff8e3 !default;
+
+$bg-colors: $bg-error $bg-warn $bg-info $bg-success $bg-muted $bg-selected !default;

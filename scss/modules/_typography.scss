@@ -46,23 +46,6 @@ body{
 small, .small{
     font-size: $small;
 }
-
-.warn{
-    color: $text-color-warn;
-}
-
-.error{
-    color: $text-color-error;
-}
-
-.muted{
-    color: $text-color-muted;
-}
-
-.success{
-    color: $text-color-success;
-}
-
 hr{
     border: none;
     border-top: $hr-border;
