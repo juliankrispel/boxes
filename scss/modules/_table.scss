@@ -23,8 +23,10 @@ table{
     th{
         font-weight: $table-head-font-weight;
     }
-    th, td{
+    th{
         white-space: nowrap;
+    }
+    th, td{
         padding: $cell-padding;
         *{
             vertical-align: middle;

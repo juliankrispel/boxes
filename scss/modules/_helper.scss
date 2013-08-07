@@ -17,6 +17,10 @@
     text-overflow: normal;
 }
 
+.nowrap{
+    white-space: nowrap;
+}
+
 .min-width        { min-width: $min-width; }
 .min-width--l     { min-width: $min-width * 1.5; }
 .min-width--s     { min-width: $min-width * .7; }
