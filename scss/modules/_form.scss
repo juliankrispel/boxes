@@ -27,6 +27,8 @@
 
 .label{
     @extend %input-base;
+    padding-left: 0;
+    padding-right: 0;
     display: inline-block;
     overflow: hidden;
 }
