@@ -71,7 +71,9 @@
 
 .box-shadow        { @include box-shadow($box-shadow); }
 
-@media(max-width: $tablet-breakpoint){ 
+@media only screen
+    and(max-width: $tablet-breakpoint)
+    and(min-width: $mobile-breakpoint){ 
     .tablet-left            { float: left; }
     .tablet-right            { float: right; }
     .tablet-text-left        { text-align: left !important; }
