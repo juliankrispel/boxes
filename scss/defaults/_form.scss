@@ -6,7 +6,7 @@ $input-border: 1px solid #ccc !default;
 $input-border-hover: 1px solid #c0c0c0 !default;
 $input-background: transparent !default;
 $input-background-active: #fff !default;
-$input-border-radius: $border-radius;
+$input-border-radius: $border-radius !default;
 $input-margin-bottom: $margin-small !default;
 $input-box-shadow: inset 0 2px 2px #eee !default;
 $input-transition: $transition !default;
