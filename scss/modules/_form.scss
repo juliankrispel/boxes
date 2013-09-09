@@ -23,6 +23,7 @@
     @include box-sizing(border-box);
     display: block;
     width: 100%;
+    color: $input-color;
 }
 
 .label{
