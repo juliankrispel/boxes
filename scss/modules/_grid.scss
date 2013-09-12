@@ -19,6 +19,7 @@
 
     @for $column from 1 to $column-total {
         .#{$device}-block-grid-#{$columns}{
+            width: 100%;
             float: left;
             & > *:nth-child(#{$columns}n + 1){
                 clear: both;
