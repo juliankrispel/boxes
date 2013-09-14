@@ -1,9 +1,19 @@
 $sizes: desktop tablet mobile;
 $directions: bottom top left right;
+$shades:
+    "light" $border-color-light,
+    "dark" $border-color-dark
+;
 
 @each $direction in $directions{
     .border-#{$direction}{
         border-#{$direction}: $border-width $border-style $border-color;
+    }
+
+    @each $shade in $shades{
+        .border-#{$direction}-#{nth($shade,1)}{
+            border-#{$direction}: $border-width $border-style nth($shade,2);
+        }
     }
 
     @each $size in $sizes{
@@ -12,6 +22,11 @@ $directions: bottom top left right;
                 .#{$size}-border-#{$direction}{
                     border-#{$direction}: $border-width $border-style $border-color;
                 }
+                @each $shade in $shades{
+                    .#{$size}-border-#{$direction}-#{nth($shade,1)}{
+                        border-#{$direction}: $border-width $border-style nth($shade,2);
+                    }
+                }
             }
         }
         @if($size == tablet){
@@ -19,12 +34,22 @@ $directions: bottom top left right;
                 .#{$size}-border-#{$direction}{
                     border-#{$direction}: $border-width $border-style $border-color;
                 }
+                @each $shade in $shades{
+                    .#{$size}-border-#{$direction}-#{nth($shade,1)}{
+                        border-#{$direction}: $border-width $border-style nth($shade,2);
+                    }
+                }
             }
         }
         @if($size == mobile){
             @media(max-width: $mobile-breakpoint){
                 .#{$size}-border-#{$direction}{
                     border-#{$direction}: $border-width $border-style $border-color;
+                }
+                @each $shade in $shades{
+                    .#{$size}-border-#{$direction}-#{nth($shade,1)}{
+                        border-#{$direction}: $border-width $border-style nth($shade,2);
+                    }
                 }
             }
         }
